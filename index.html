@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Rainha das Promoções 👑 | Cupons Mercado Livre</title>
+<meta name="description" content="Cupons ativos do Mercado Livre com as regras completas: percentual de desconto, valor mínimo e limite. Atualizado diariamente pela Rainha das Promoções.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👑</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --azul-fundo:#3a4bd8;
+    --preto:#15151f;
+    --branco-janela:#f2f1ea;
+    --lilas:#a99df5;
+    --lilas-claro:#c7bffa;
+    --verde:#5fd68f;
+    --verde-claro:#a5e8ba;
+    --amarelo:#f5c518;
+    --rosa:#ff7bac;
+    --vermelho:#f2545b;
+    --ciano:#6fd8e0;
+    --sombra:6px 6px 0 var(--preto);
+    --sombra-mini:4px 4px 0 var(--preto);
+    --borda:3px solid var(--preto);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Space Grotesk',sans-serif;
+    background-color:var(--azul-fundo);
+    background-image:
+      linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);
+    background-size:28px 28px;
+    color:var(--preto);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  .container{max-width:980px;margin:0 auto;padding:0 16px}
+
+  /* ===== decorações flutuantes ===== */
+  .deco{position:fixed;font-size:1.6rem;opacity:.9;pointer-events:none;z-index:1;
+    text-shadow:2px 2px 0 rgba(0,0,0,.3)}
+  .deco.d1{top:8%;left:4%}
+  .deco.d2{top:22%;right:5%}
+  .deco.d3{bottom:12%;left:6%}
+  .deco.d4{bottom:28%;right:4%}
+  @media(max-width:700px){.deco{display:none}}
+
+  /* ===== JANELA (componente base) ===== */
+  .janela{
+    background:var(--branco-janela);
+    border:var(--borda);
+    border-radius:12px;
+    box-shadow:var(--sombra);
+    overflow:hidden;
+    position:relative;
+    z-index:2;
+  }
+  .barra{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:8px 14px;
+    border-bottom:var(--borda);
+    font-weight:700;
+    font-size:.85rem;
+    letter-spacing:.3px;
+  }
+  .barra .luzes{font-weight:700;letter-spacing:2px;font-size:.9rem}
+
+  /* ===== HEADER ===== */
+  header{padding:26px 0 8px;position:relative;z-index:2}
+  .janela-titulo .barra{background:var(--lilas)}
+  .janela-titulo .conteudo{
+    padding:22px 20px 24px;
+    text-align:center;
+  }
+  .janela-titulo h1{
+    font-family:'Archivo Black',sans-serif;
+    font-size:clamp(1.5rem,5.5vw,2.4rem);
+    text-transform:uppercase;
+    line-height:1.05;
+    letter-spacing:-.5px;
+    color:#3a4bd8;
+  }
+  .janela-titulo p{
+    margin-top:10px;
+    font-weight:600;
+    font-size:.95rem;
+  }
+  .etiquetas{
+    display:flex;
+    gap:10px;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin-top:14px;
+  }
+  .etiqueta{
+    border:var(--borda);
+    border-radius:10px;
+    box-shadow:var(--sombra-mini);
+    padding:7px 14px;
+    font-weight:700;
+    font-size:.82rem;
+    background:var(--verde-claro);
+  }
+  .etiqueta.roxa{background:var(--lilas-claro)}
+  .etiqueta.amarela{background:var(--amarelo)}
+
+  /* ===== FAIXA DE CARINHAS ===== */
+  .faixa{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin:20px 0 0;
+    flex-wrap:wrap;
+    justify-content:center;
+    position:relative;
+    z-index:2;
+  }
+  .moedas{font-size:1.5rem;letter-spacing:2px;filter:drop-shadow(2px 2px 0 rgba(0,0,0,.35))}
+  .faixa .pilula{
+    background:var(--lilas);
+    border:var(--borda);
+    border-radius:999px;
+    box-shadow:var(--sombra-mini);
+    padding:8px 18px;
+    font-weight:700;
+    font-size:.9rem;
+  }
+
+  /* ===== BUSCA + COMO USAR ===== */
+  .linha-meio{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:18px;
+    margin-top:22px;
+    position:relative;
+    z-index:2;
+  }
+  .janela-comousar .barra{background:var(--verde)}
+  .janela-comousar .conteudo{padding:16px 18px;font-size:.9rem;font-weight:600}
+  .janela-comousar ol{margin:6px 0 0 20px}
+  .janela-comousar li{margin-bottom:4px}
+  .dica-retro{
+    margin-top:10px;
+    background:var(--amarelo);
+    border:var(--borda);
+    border-radius:10px;
+    padding:9px 12px;
+    font-size:.84rem;
+    box-shadow:var(--sombra-mini);
+  }
+  .janela-busca .barra{background:var(--ciano)}
+  .janela-busca .conteudo{padding:16px 18px}
+  .campo-busca{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    border:var(--borda);
+    border-radius:10px;
+    background:#fff;
+    padding:11px 14px;
+    box-shadow:inset 3px 3px 0 rgba(0,0,0,.08);
+  }
+  .campo-busca input{
+    border:none;outline:none;background:transparent;
+    font-family:'Space Grotesk',sans-serif;
+    font-weight:600;font-size:.92rem;color:var(--preto);
+    width:100%;
+  }
+  .campo-busca input::placeholder{color:#9a97a8}
+  .janela-busca .estrelas{
+    margin-top:12px;
+    text-align:center;
+    font-size:1.3rem;
+    letter-spacing:4px;
+    filter:drop-shadow(2px 2px 0 rgba(0,0,0,.25));
+  }
+
+  /* ===== FILTROS ===== */
+  nav.filtros{
+    position:sticky;
+    top:0;
+    z-index:30;
+    padding:14px 0 12px;
+    margin-top:8px;
+    background:linear-gradient(to bottom,var(--azul-fundo) 78%,rgba(58,75,216,0));
+  }
+  .filtros-inner{
+    max-width:980px;
+    margin:0 auto;
+    padding:0 16px;
+    display:flex;
+    gap:10px;
+    overflow-x:auto;
+    scrollbar-width:none;
+    -webkit-overflow-scrolling:touch;
+    padding-bottom:6px;
+  }
+  .filtros-inner::-webkit-scrollbar{display:none}
+  .chip{
+    flex:0 0 auto;
+    border:var(--borda);
+    background:var(--branco-janela);
+    color:var(--preto);
+    border-radius:10px;
+    padding:9px 16px;
+    font-family:'Space Grotesk',sans-serif;
+    font-size:.85rem;
+    font-weight:700;
+    cursor:pointer;
+    white-space:nowrap;
+    box-shadow:var(--sombra-mini);
+    transition:transform .1s,box-shadow .1s;
+  }
+  .chip:hover{transform:translate(1px,1px);box-shadow:3px 3px 0 var(--preto)}
+  .chip.ativo{
+    background:var(--amarelo);
+    transform:translate(2px,2px);
+    box-shadow:2px 2px 0 var(--preto);
+  }
+
+  /* ===== GRADE DE CUPONS ===== */
+  main{padding:8px 0 30px;position:relative;z-index:2}
+  .contagem{
+    font-size:.85rem;font-weight:700;color:#fff;margin-bottom:14px;
+    text-shadow:2px 2px 0 rgba(0,0,0,.35);
+  }
+  .grade{display:grid;grid-template-columns:1fr;gap:20px}
+  @media(min-width:640px){.grade{grid-template-columns:1fr 1fr}}
+  @media(min-width:900px){.grade{grid-template-columns:1fr 1fr 1fr}}
+
+  .cupom{display:flex;flex-direction:column}
+  .cupom .conteudo{
+    padding:15px 15px 17px;
+    display:flex;
+    flex-direction:column;
+    gap:11px;
+    flex:1;
+  }
+  .cupom .barra{font-size:.78rem;text-transform:uppercase;letter-spacing:.5px}
+  .b-geral{background:var(--amarelo)}
+  .b-moda{background:var(--rosa)}
+  .b-casa{background:var(--verde)}
+  .b-beleza{background:var(--lilas)}
+  .b-eletro{background:var(--ciano)}
+  .b-internacional{background:var(--lilas-claro)}
+  .b-outros{background:var(--verde-claro)}
+
+  .desconto{
+    font-family:'Archivo Black',sans-serif;
+    font-size:1.6rem;
+    line-height:1;
+    letter-spacing:-.5px;
+  }
+  .codigo-wrap{
+    display:flex;
+    align-items:stretch;
+    border:3px dashed var(--preto);
+    border-radius:10px;
+    overflow:hidden;
+    background:#fff;
+  }
+  .codigo{
+    flex:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Space Grotesk',monospace;
+    font-weight:700;
+    font-size:.98rem;
+    letter-spacing:.5px;
+    padding:11px 6px;
+    overflow-wrap:break-word;
+    text-align:center;
+    min-width:0;
+  }
+  .btn-copiar{
+    border:none;
+    border-left:3px dashed var(--preto);
+    background:var(--verde);
+    color:var(--preto);
+    font-family:'Space Grotesk',sans-serif;
+    font-weight:700;
+    font-size:.82rem;
+    padding:0 16px;
+    cursor:pointer;
+    min-width:88px;
+    transition:background .12s;
+  }
+  .btn-copiar:hover{background:var(--verde-claro)}
+  .btn-copiar.copiado{background:var(--amarelo)}
+  .regras{font-size:.86rem;font-weight:600;color:#4a4757}
+  .regras b{color:var(--preto)}
+  .btn-produtos{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:7px;
+    background:var(--lilas);
+    color:var(--preto);
+    font-weight:700;
+    font-size:.92rem;
+    text-decoration:none;
+    border:var(--borda);
+    border-radius:10px;
+    padding:12px;
+    box-shadow:var(--sombra-mini);
+    transition:transform .1s,box-shadow .1s;
+    margin-top:auto;
+  }
+  .btn-produtos:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--preto)}
+  .vazio{
+    text-align:center;color:#fff;font-weight:700;padding:40px 0;display:none;
+    text-shadow:2px 2px 0 rgba(0,0,0,.35);
+  }
+
+  /* ===== AVISO ===== */
+  .janela-aviso{margin-bottom:20px}
+  .janela-aviso .barra{background:var(--vermelho);color:#fff}
+  .janela-aviso .conteudo{padding:14px 16px;font-size:.86rem;font-weight:600}
+
+  /* ===== RODAPÉ ===== */
+  .janela-rodape{margin-bottom:26px}
+  .janela-rodape .barra{background:var(--amarelo)}
+  .janela-rodape .conteudo{
+    padding:16px 18px;
+    text-align:center;
+    font-weight:600;
+    font-size:.85rem;
+  }
+  .janela-rodape .estrelas{font-size:1.4rem;letter-spacing:4px;margin-bottom:6px;
+    filter:drop-shadow(2px 2px 0 rgba(0,0,0,.2))}
+
+  /* ===== TOAST ===== */
+  #toast{
+    position:fixed;
+    bottom:24px;
+    left:50%;
+    transform:translateX(-50%) translateY(90px);
+    background:var(--verde);
+    color:var(--preto);
+    border:var(--borda);
+    padding:12px 22px;
+    border-radius:10px;
+    font-size:.9rem;
+    font-weight:700;
+    box-shadow:var(--sombra-mini);
+    transition:transform .25s ease;
+    z-index:50;
+    pointer-events:none;
+  }
+  #toast.mostrar{transform:translateX(-50%) translateY(0)}
+</style>
+</head>
+<body>
+
+<span class="deco d1">✦</span>
+<span class="deco d2">⭐</span>
+<span class="deco d3">✨</span>
+<span class="deco d4">✦</span>
+
+<div class="container">
+
+  <header>
+    <div class="janela janela-titulo">
+      <div class="barra"><span></span><span class="luzes">○ ─ ✕</span></div>
+      <div class="conteudo">
+        <h1>👑 A Rainha das<br>Promoções!</h1>
+        <p>Cupons do Mercado Livre com todas as regras, sem pegadinha. Copie, cole no carrinho e economize.</p>
+        <div class="etiquetas">
+          <span class="etiqueta">✔ Regras completas</span>
+          <span class="etiqueta roxa">🚀 Link direto dos produtos</span>
+          <span class="etiqueta amarela">⚡ Atualizado 24/07</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="faixa">
+      <span class="moedas">😊😊😊😊😊</span>
+      <span class="pilula" id="pilula-total">🎟️ 23 cupons ativos hoje</span>
+    </div>
+  </header>
+
+  <div class="linha-meio">
+    <div class="janela janela-comousar">
+      <div class="barra"><span>Veja como fazer</span><span class="luzes">○ ─ ✕</span></div>
+      <div class="conteudo">
+        <ol>
+          <li><b>Copie</b> o código do cupom desejado.</li>
+          <li>Clique em <b>"Ver produtos"</b> — o cupom vale para os produtos dessa lista (são milhares!).</li>
+          <li>Ao entrar no site do Mercado Livre, clique na opção <b>"Mostrar mais"</b> para acessar a lista completa de produtos.</li>
+          <li>No carrinho, <b>cole o código</b> no campo de cupom antes de finalizar.</li>
+        </ol>
+        <div class="dica-retro">💡 <b>Dica da Rainha:</b> teste mais de um cupom no seu produto — às vezes um cupom "menor" dá mais desconto no seu caso.</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<nav class="filtros">
+  <div class="filtros-inner" id="filtros"></div>
+</nav>
+
+<div class="container">
+  <main>
+    <div class="contagem" id="contagem"></div>
+    <div class="grade" id="grade"></div>
+    <div class="vazio" id="vazio">😔 Nenhum cupom encontrado nessa categoria!</div>
+  </main>
+
+  <div class="janela janela-aviso">
+    <div class="barra"><span></span><span class="luzes">○ ─ ✕</span></div>
+    <div class="conteudo">
+      Os cupons têm <b>verba limitada</b> e podem ser encerrados pelo Mercado Livre antes do previsto, sem aviso. As regras (valor mínimo e limite de desconto) são definidas pelo próprio Mercado Livre e podem mudar. Confira sempre o desconto aplicado no carrinho antes de finalizar a compra.
+    </div>
+  </div>
+
+  <div class="janela janela-rodape">
+    <div class="barra"><span></span><span class="luzes">○ ─ ✕</span></div>
+    <div class="conteudo">
+      <div class="estrelas">⭐⭐⭐⭐⭐</div>
+      <p>👑 <b>A Rainha das Promoções</b> — cupons e ofertas do Mercado Livre. Volte sempre: tem cupom novo toda semana!</p>
+      <p style="margin-top:6px;color:#6b6880">Este site participa do programa de afiliados do Mercado Livre. Ao comprar pelos links daqui, você não paga nada a mais e ainda apoia o trabalho da Rainha. 💜</p>
+    </div>
+  </div>
+</div>
+
+<div id="toast">Código copiado! 🎉</div>
+
+<script>
+/* ============================================================
+   CUPONS — para atualizar, edite somente esta lista.
+   cat: geral | moda | casa | beleza | eletro | internacional | outros
+   ============================================================ */
+const CUPONS = [
+  {codigo:"LIQUIDA30",        desconto:"30% OFF", regra:"Sem valor mínimo divulgado · desconto máximo de <b>R$ 1.000</b>", cat:"geral",         link:"https://meli.la/19KJjyK"},
+  {codigo:"BOMDEMAIS",        desconto:"30% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 100</b>", cat:"geral",         link:"https://meli.la/1sSWxr6"},
+  {codigo:"MELIGARANTE",      desconto:"25% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 100</b>", cat:"geral",         link:"https://meli.la/2svEPC7"},
+  {codigo:"VALEAPENANOMELI",  desconto:"25% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 100</b>", cat:"geral",         link:"https://meli.la/1AASzvM"},
+  {codigo:"AMOMELI",          desconto:"25% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 100</b>", cat:"geral",         link:"https://meli.la/1NdkPP6"},
+  {codigo:"GARNIERNOMELI",    desconto:"25% OFF", regra:"Compras acima de <b>R$ 59,90</b> · desconto máximo de <b>R$ 40</b>", cat:"beleza",      link:"https://meli.la/2UXphE8"},
+  {codigo:"MAYBELLINENOMELI", desconto:"25% OFF", regra:"Compras acima de <b>R$ 89,90</b> · desconto máximo de <b>R$ 40</b>", cat:"beleza",      link:"https://meli.la/1TLcrhw"},
+  {codigo:"MELIPRACASA",      desconto:"20% OFF", regra:"Compras acima de <b>R$ 19</b> · desconto máximo de <b>R$ 100</b>", cat:"casa",          link:"https://meli.la/2ohPKPm"},
+  {codigo:"OFERTASML",        desconto:"20% OFF", regra:"Compras acima de <b>R$ 19</b> · desconto máximo de <b>R$ 100</b>", cat:"geral",         link:"https://meli.la/292VneY"},
+  {codigo:"MODAML",           desconto:"20% OFF", regra:"Compras acima de <b>R$ 19</b> · desconto máximo de <b>R$ 60</b>", cat:"moda",           link:"https://meli.la/11bNgeM"},
+  {codigo:"FASHION",          desconto:"20% OFF", regra:"Compras acima de <b>R$ 19</b> · desconto máximo de <b>R$ 60</b>", cat:"moda",           link:"https://meli.la/1cN41bt"},
+  {codigo:"CASACOREMELI",     desconto:"20% OFF", regra:"Compras acima de <b>R$ 79</b> · desconto máximo de <b>R$ 80</b>", cat:"casa",           link:"https://meli.la/21tZoP8"},
+  {codigo:"MODACOMVC",        desconto:"18% OFF", regra:"Compras acima de <b>R$ 19</b> · desconto máximo de <b>R$ 60</b>", cat:"moda",           link:"https://meli.la/163MoGA"},
+  {codigo:"VOLTAASAULAS",     desconto:"18% OFF", regra:"Compras acima de <b>R$ 79</b> · desconto máximo de <b>R$ 60</b>", cat:"outros",         link:"https://meli.la/1Y56VhD"},
+  {codigo:"15OFFINTERNACIONAL",desconto:"15% OFF",regra:"Compras acima de <b>R$ 50</b> · desconto máximo de <b>R$ 25</b>", cat:"internacional",  link:"https://meli.la/1f8GnJ3"},
+  {codigo:"TIENDASOFICIALES", desconto:"15% OFF", regra:"Compras acima de <b>R$ 89</b> · desconto máximo de <b>R$ 30</b>", cat:"internacional",  link:"https://meli.la/1nX1Qeu"},
+  {codigo:"MELIOFERTAS",      desconto:"10% OFF", regra:"Compras acima de <b>R$ 79</b> · desconto máximo de <b>R$ 50</b>", cat:"geral",          link:"https://meli.la/2CzThTX"},
+  {codigo:"TVCASASBAHIA",     desconto:"10% OFF", regra:"Compras acima de <b>R$ 199</b> · desconto máximo de <b>R$ 300</b>", cat:"eletro",       link:"https://meli.la/2CTaXCr"},
+  {codigo:"SOFA10",           desconto:"10% OFF", regra:"Compras acima de <b>R$ 199</b> · desconto máximo de <b>R$ 150</b>", cat:"casa",         link:"https://meli.la/2iiemJZ"},
+  {codigo:"GUARDA10",         desconto:"10% OFF", regra:"Compras acima de <b>R$ 199</b> · desconto máximo de <b>R$ 150</b>", cat:"casa",         link:"https://meli.la/2TW4f7s"},
+  {codigo:"COLCHAO10",        desconto:"10% OFF", regra:"Compras acima de <b>R$ 199</b> · desconto máximo de <b>R$ 150</b>", cat:"casa",         link:"https://meli.la/18tejiU"},
+  {codigo:"CELUCB",           desconto:"10% OFF", regra:"Compras acima de <b>R$ 700</b> · desconto máximo de <b>R$ 500</b>", cat:"eletro",       link:"https://meli.la/1pqkRLt"},
+  {codigo:"CONSTRUCAO",       desconto:"R$ 20 OFF",regra:"Válido em <b>Obra & Ferramenta</b>", cat:"outros",                 link:"https://meli.la/2a28isd"}
+];
+
+const CATEGORIAS = {
+  todos:"🌐 Todos",
+  geral:"⭐ Quase todo o site",
+  moda:"👗 Moda",
+  casa:"🏠 Casa & Decoração",
+  beleza:"💄 Beleza",
+  eletro:"📺 Eletrônicos",
+  internacional:"✈️ Internacional",
+  outros:"🎁 Outros"
+};
+
+const filtrosEl = document.getElementById('filtros');
+const gradeEl = document.getElementById('grade');
+const vazioEl = document.getElementById('vazio');
+const contagemEl = document.getElementById('contagem');
+document.getElementById('pilula-total').textContent = `🎟️ ${CUPONS.length} cupons ativos hoje`;
+
+let filtroAtivo = 'todos';
+let termoBusca = '';
+
+function montarFiltros(){
+  Object.entries(CATEGORIAS).forEach(([chave,rotulo])=>{
+    const temCupom = chave==='todos' || CUPONS.some(c=>c.cat===chave);
+    if(!temCupom) return;
+    const btn = document.createElement('button');
+    btn.className = 'chip' + (chave===filtroAtivo?' ativo':'');
+    btn.textContent = rotulo;
+    btn.dataset.cat = chave;
+    btn.addEventListener('click',()=>{
+      filtroAtivo = chave;
+      document.querySelectorAll('.chip').forEach(c=>c.classList.toggle('ativo',c.dataset.cat===chave));
+      renderizar();
+    });
+    filtrosEl.appendChild(btn);
+  });
+}
+
+function renderizar(){
+  let lista = filtroAtivo==='todos' ? CUPONS : CUPONS.filter(c=>c.cat===filtroAtivo);
+  if(termoBusca){
+    lista = lista.filter(c=>c.codigo.toLowerCase().includes(termoBusca));
+  }
+  gradeEl.innerHTML = '';
+  vazioEl.style.display = lista.length ? 'none' : 'block';
+  contagemEl.textContent = lista.length
+    ? `Mostrando ${lista.length} ${lista.length===1?'cupom':'cupons'}${filtroAtivo!=='todos' ? ' em '+CATEGORIAS[filtroAtivo].replace(/^\S+\s/,'') : ''}`
+    : '';
+  lista.forEach(c=>{
+    const card = document.createElement('article');
+    card.className = 'janela cupom';
+    card.innerHTML = `
+      <div class="barra b-${c.cat}"><span></span><span class="luzes">○ ─ ✕</span></div>
+      <div class="conteudo">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:8px">
+          <span class="desconto">${c.desconto}</span>
+          <span style="font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#6b6880">${CATEGORIAS[c.cat].replace(/^\S+\s/,'')}</span>
+        </div>
+        <div class="codigo-wrap">
+          <span class="codigo">${c.codigo}</span>
+          <button class="btn-copiar" data-codigo="${c.codigo}">Copiar</button>
+        </div>
+        <p class="regras">${c.regra}</p>
+        <a class="btn-produtos" href="${c.link}" target="_blank" rel="noopener">🛒 Ver produtos do cupom ↗</a>
+      </div>
+    `;
+    gradeEl.appendChild(card);
+  });
+  document.querySelectorAll('.btn-copiar').forEach(btn=>{
+    btn.addEventListener('click',()=>copiar(btn));
+  });
+}
+
+function copiar(btn){
+  const codigo = btn.dataset.codigo;
+  const feito = ()=>{
+    btn.textContent = 'Copiado ✓';
+    btn.classList.add('copiado');
+    mostrarToast();
+    setTimeout(()=>{ btn.textContent = 'Copiar'; btn.classList.remove('copiado'); },2000);
+  };
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(codigo).then(feito).catch(()=>copiarFallback(codigo,feito));
+  } else { copiarFallback(codigo,feito); }
+}
+function copiarFallback(texto,cb){
+  const ta = document.createElement('textarea');
+  ta.value = texto; ta.style.position='fixed'; ta.style.opacity='0';
+  document.body.appendChild(ta); ta.select();
+  try{ document.execCommand('copy'); }catch(e){}
+  document.body.removeChild(ta); cb();
+}
+let toastTimer;
+function mostrarToast(){
+  const t = document.getElementById('toast');
+  t.classList.add('mostrar');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(()=>t.classList.remove('mostrar'),1800);
+}
+
+montarFiltros();
+renderizar();
+</script>
+</body>
+</html>
