@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>A Rainha das Promoções 👑 | Cupons Mercado Livre</title>
 <meta name="description" content="Cupons ativos do Mercado Livre com as regras completas: percentual de desconto, valor mínimo e limite. Atualizado diariamente pela Rainha das Promoções.">
+<meta property="og:title" content="A Rainha das Promoções 👑 | Cupons Mercado Livre">
+<meta property="og:description" content="Lista de cupons do Mercado Livre com regras completas, verificados e atualizados todo dia.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://arainhadaspromocoes.github.io/">
+<meta property="og:image" content="https://arainhadaspromocoes.github.io/logo.jpg">
+<meta property="og:image:width" content="900">
+<meta property="og:image:height" content="900">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://arainhadaspromocoes.github.io/logo.jpg">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👑</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -122,7 +131,7 @@
   }
   .linha-ig a{color:var(--preto);text-decoration:none;display:inline-flex;align-items:center;gap:6px}
   .linha-ig a:hover{text-decoration:underline}
-  .linha-ig-titulo{margin-top:12px;font-size:1.12rem;gap:8px 22px}
+  .linha-ig-titulo{margin-top:12px;font-size:.98rem;gap:8px 22px}
   .marca-texto{
     background:var(--amarelo);
     padding:2px 12px;border-radius:10px;
@@ -380,6 +389,25 @@
     margin-top:auto;
   }
   .btn-produtos:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--preto)}
+  .selo-verif{font-size:.64rem;letter-spacing:.4px}
+  .tag-novo{
+    background:var(--vermelho);color:#fff;
+    font-size:.66rem;font-weight:700;letter-spacing:.6px;
+    padding:3px 9px;border-radius:999px;border:2px solid var(--preto);
+    animation:alvo-pulsa 1.2s infinite;
+  }
+  .titulo-secao{
+    font-size:1.05rem;font-weight:700;color:#fff;
+    text-shadow:2px 2px 0 rgba(0,0,0,.35);
+    margin-bottom:12px;
+  }
+  #grade-destaque .cupom{border:3px solid var(--amarelo);box-shadow:6px 6px 0 var(--preto),0 0 0 3px var(--preto)}
+  .btn-compartilhar{
+    display:flex;align-items:center;justify-content:center;gap:6px;
+    font-size:.8rem;font-weight:700;color:#128C7E;
+    text-decoration:none;padding:4px;
+  }
+  .btn-compartilhar:hover{text-decoration:underline}
   .vazio{
     text-align:center;color:#fff;font-weight:700;padding:40px 0;display:none;
     text-shadow:2px 2px 0 rgba(0,0,0,.35);
@@ -535,6 +563,7 @@
       </div>
     </div>
   </div>
+  <span class="seta-descer seta-descer-2" id="seta-descer-2" title="Role para ver os cupons"><span>➜</span></span>
 
 </div>
 
@@ -546,6 +575,11 @@
 
 <div class="container">
   <main>
+    <div id="secao-queridinhos">
+      <div class="titulo-secao">🔥 Queridinhos da Rainha</div>
+      <div class="grade" id="grade-destaque"></div>
+      <div class="titulo-secao" style="margin-top:26px">🎟️ Todos os cupons</div>
+    </div>
     <div class="contagem" id="contagem"></div>
     <div class="grade" id="grade"></div>
     <div class="vazio" id="vazio">😔 Nenhum cupom encontrado nessa categoria!</div>
@@ -596,10 +630,11 @@
    CUPONS — para atualizar, edite somente esta lista.
    cat: geral | moda | casa | beleza | eletro | internacional | outros
    ============================================================ */
+const DATA_VERIF = '25/07';
 const CUPONS = [
-  {codigo:"LIQUIDA30",        desconto:"30% OFF", regra:"Sem valor mínimo divulgado · desconto máximo de <b>R$ 1.000</b>", cat:"geral",         link:"https://meli.la/19KJjyK"},
-  {codigo:"BOMDEMAIS",        desconto:"30% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 100</b>", cat:"geral",         link:"https://meli.la/1sSWxr6"},
-  {codigo:"MELIGARANTE",      desconto:"25% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 100</b>", cat:"geral",         link:"https://meli.la/2svEPC7"},
+  {codigo:"LIQUIDA30", destaque:true,        desconto:"30% OFF", regra:"Sem valor mínimo divulgado · desconto máximo de <b>R$ 1.000</b>", cat:"geral",         link:"https://meli.la/19KJjyK"},
+  {codigo:"BOMDEMAIS", destaque:true,        desconto:"30% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 100</b>", cat:"geral",         link:"https://meli.la/1sSWxr6"},
+  {codigo:"MELIGARANTE", destaque:true,      desconto:"25% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 100</b>", cat:"geral",         link:"https://meli.la/2svEPC7"},
   {codigo:"VALEAPENANOMELI",  desconto:"25% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 100</b>", cat:"geral",         link:"https://meli.la/1AASzvM"},
   {codigo:"AMOMELI",          desconto:"25% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 100</b>", cat:"geral",         link:"https://meli.la/1NdkPP6"},
   {codigo:"GARNIERNOMELI",    desconto:"25% OFF", regra:"Compras acima de <b>R$ 59,90</b> · desconto máximo de <b>R$ 40</b>", cat:"beleza",      link:"https://meli.la/2UXphE8"},
@@ -669,14 +704,31 @@ function renderizar(){
   contagemEl.textContent = lista.length
     ? `Mostrando ${lista.length} ${lista.length===1?'cupom':'cupons'}${filtroAtivo!=='todos' ? ' em '+CATEGORIAS[filtroAtivo].replace(/^\S+\s/,'') : ''}`
     : '';
+  const gradeDestaque = document.getElementById('grade-destaque');
+  const secaoQ = document.getElementById('secao-queridinhos');
+  gradeDestaque.innerHTML = '';
+  if(filtroAtivo === 'todos'){
+    secaoQ.style.display = '';
+    CUPONS.filter(c=>c.destaque).forEach(c=>gradeDestaque.appendChild(criarCard(c)));
+  } else {
+    secaoQ.style.display = 'none';
+  }
   lista.forEach(c=>{
+    gradeEl.appendChild(criarCard(c));
+  });
+  document.querySelectorAll('.btn-copiar').forEach(btn=>{
+    btn.addEventListener('click',()=>copiar(btn));
+  });
+}
+
+function criarCard(c){
     const card = document.createElement('article');
     card.className = 'janela cupom';
     card.innerHTML = `
-      <div class="barra b-${c.cat}"><span></span><span class="luzes">○ ─ ✕</span></div>
+      <div class="barra b-${c.cat}"><span class="selo-verif">✓ Verificado ${DATA_VERIF}</span><span class="luzes">○ ─ ✕</span></div>
       <div class="conteudo">
         <div style="display:flex;justify-content:space-between;align-items:center;gap:8px">
-          <span class="desconto">${c.desconto}</span>
+          <span class="desconto">${c.desconto}</span>${c.novo ? '<span class="tag-novo">NOVO</span>' : ''}
           <span style="font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#6b6880">${CATEGORIAS[c.cat].replace(/^\S+\s/,'')}</span>
         </div>
         <div class="codigo-wrap">
@@ -685,13 +737,10 @@ function renderizar(){
         </div>
         <p class="regras">${c.regra}</p>
         <a class="btn-produtos" href="${c.link}" target="_blank" rel="noopener">Ver produtos que aceitam o cupom ↗</a>
+        <a class="btn-compartilhar" href="https://wa.me/?text=${encodeURIComponent('👑 Cupom *' + c.codigo + '* (' + c.desconto + ') no Mercado Livre! Regras e link aqui: https://arainhadaspromocoes.github.io')}" target="_blank" rel="noopener">📤 Mandar pra uma amiga</a>
       </div>
     `;
-    gradeEl.appendChild(card);
-  });
-  document.querySelectorAll('.btn-copiar').forEach(btn=>{
-    btn.addEventListener('click',()=>copiar(btn));
-  });
+    return card;
 }
 
 function copiar(btn){
@@ -849,6 +898,9 @@ setaDescer.addEventListener('click', ()=>{
 });
 window.addEventListener('scroll', ()=>{
   setaDescer.style.display = window.scrollY > 180 ? 'none' : 'flex';
+});
+document.getElementById('seta-descer-2').addEventListener('click', ()=>{
+  document.getElementById('secao-filtros').scrollIntoView({behavior:'smooth', block:'start'});
 });
 
 const setaScroll = document.getElementById('seta-scroll');
