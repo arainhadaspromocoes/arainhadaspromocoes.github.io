@@ -233,6 +233,18 @@
     animation:seta-lado .8s infinite;
   }
   .seta-scroll:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--preto)}
+  .seta-descer{
+    margin:16px auto 0;
+    width:36px;height:36px;border-radius:50%;
+    background:var(--amarelo);border:var(--borda);color:var(--preto);
+    display:flex;align-items:center;justify-content:center;
+    font-size:1rem;font-weight:700;cursor:pointer;
+    box-shadow:var(--sombra-mini);
+    animation:seta-desce .8s infinite;
+    position:relative;z-index:2;
+  }
+  .seta-descer span{display:inline-block;transform:rotate(90deg)}
+  @keyframes seta-desce{0%,100%{margin-top:16px}50%{margin-top:24px}}
   .seta-volta{
     right:auto;left:10px;
     transform:scaleX(-1);
@@ -468,12 +480,11 @@
         <div class="etiquetas">
           <span class="etiqueta roxa" id="abrir-tutorial">🎬 Como usar o cupom</span>
           <span class="etiqueta amarela" id="pilula-total" data-alvo="#secao-filtros">🎟️ 23 cupons ativos · atualizado 24/07</span>
-          <span class="etiqueta" data-alvo="#secao-como">✔ Regras completas</span>
         </div>
         <p class="frase-topo">Volte sempre! Tem cupom novo todo dia</p>
       </div>
     </div>
-
+    <span class="seta-descer" id="seta-descer" title="Role para ver os cupons"><span>➜</span></span>
   </header>
 
   <div class="linha-meio">
@@ -789,6 +800,14 @@ document.querySelectorAll('[data-alvo]').forEach(el=>{
 
 montarFiltros();
 renderizar();
+
+const setaDescer = document.getElementById('seta-descer');
+setaDescer.addEventListener('click', ()=>{
+  document.getElementById('secao-como').scrollIntoView({behavior:'smooth', block:'start'});
+});
+window.addEventListener('scroll', ()=>{
+  setaDescer.style.display = window.scrollY > 180 ? 'none' : 'flex';
+});
 
 const setaScroll = document.getElementById('seta-scroll');
 function checaSetaScroll(){
