@@ -735,7 +735,7 @@ function criarCard(c){
           <button class="btn-copiar" data-codigo="${c.codigo}">Copiar</button>
         </div>
         <p class="regras">${c.regra}</p>
-        ${c.vence ? '<p class="vence">⏳ ' + (c.vence === DATA_VERIF ? '<b>Vence hoje!</b>' : 'Válido até ' + c.vence) + '</p>' : ''}
+        ${c.vence === DATA_VERIF ? '<p class="vence">⏳ <b>Vence hoje!</b></p>' : ''}
         <a class="btn-produtos" href="${c.link}" target="_blank" rel="noopener">Ver produtos que aceitam o cupom ↗</a>
         <a class="btn-compartilhar" href="https://wa.me/?text=${encodeURIComponent('👑 Cupom *' + c.codigo + '* (' + c.desconto + ') no Mercado Livre! Regras e link aqui: https://arainhadaspromocoes.github.io')}" target="_blank" rel="noopener">📤 Mandar para um amigo</a>
       </div>
