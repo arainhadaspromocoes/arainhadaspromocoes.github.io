@@ -658,7 +658,6 @@ const CUPONS = [
 
 const CATEGORIAS = {
   todos:"🌐 Todos",
-  geral:"⭐ Quase todo o site",
   moda:"👗 Moda",
   casa:"🏠 Casa & Decoração",
   beleza:"💄 Beleza",
@@ -731,7 +730,7 @@ function criarCard(c){
       <div class="conteudo">
         <div style="display:flex;justify-content:space-between;align-items:center;gap:8px">
           <span class="desconto">${c.desconto}</span>${c.novo ? '<span class="tag-novo">NOVO</span>' : ''}
-          <span style="font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#6b6880">${CATEGORIAS[c.cat].replace(/^\S+\s/,'')}</span>
+          ${CATEGORIAS[c.cat] ? '<span style="font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#6b6880">' + CATEGORIAS[c.cat].replace(/^\S+\s/,'') + '</span>' : ''}
         </div>
         <div class="codigo-wrap">
           <span class="codigo">${c.codigo}</span>
