@@ -660,12 +660,12 @@ const CUPONS = [
   {codigo:"CELLPCTECH3107",   novo:true, desconto:"R$ 200 OFF", regra:"Compras acima de <b>R$ 1.599</b>", cat:"eletro",  link:"https://meli.la/32xJAk3"},
 
   /* ===== MARCAS — sempre por último ===== */
-  {codigo:"GARNIERNOMELI",    desconto:"25% OFF", regra:"Compras acima de <b>R$ 59,90</b> · desconto máximo de <b>R$ 40</b>", cat:"marcas",      link:"https://meli.la/2UXphE8"},
-  {codigo:"MAYBELLINENOMELI", desconto:"25% OFF", regra:"Compras acima de <b>R$ 89,90</b> · desconto máximo de <b>R$ 40</b>", cat:"marcas",      link:"https://meli.la/1TLcrhw"},
-  {codigo:"AFILIADOSCOMLOLA", novo:true, desconto:"20% OFF", regra:"Compras acima de <b>R$ 39,90</b> · desconto máximo de <b>R$ 12</b>", cat:"marcas",  link:"https://meli.la/1Bfqd9n"},
-  {codigo:"AFILIADOSCOMBIODERMA", novo:true, desconto:"20% OFF", regra:"Compras acima de <b>R$ 189,90</b> · desconto máximo de <b>R$ 89</b>", cat:"marcas",  link:"https://meli.la/23RTJVr"},
-  {codigo:"ISDIN15D",         novo:true, desconto:"15% OFF", regra:"Compras acima de <b>R$ 5</b> · desconto máximo de <b>R$ 150</b>", cat:"marcas",  link:"https://meli.la/2fTzfwe"},
-  {codigo:"AFILIADOSCOMSALLVE", novo:true, desconto:"15% OFF", regra:"Compras acima de <b>R$ 99,90</b> · desconto máximo de <b>R$ 44,90</b>", cat:"marcas",  link:"https://meli.la/1CVZDgo"},
+  {codigo:"GARNIERNOMELI",    desconto:"25% OFF", regra:"Compras acima de <b>R$ 59,90</b> · desconto máximo de <b>R$ 40</b>", cat:"marcas", cat2:"beleza",      link:"https://meli.la/2UXphE8"},
+  {codigo:"MAYBELLINENOMELI", desconto:"25% OFF", regra:"Compras acima de <b>R$ 89,90</b> · desconto máximo de <b>R$ 40</b>", cat:"marcas", cat2:"beleza",      link:"https://meli.la/1TLcrhw"},
+  {codigo:"AFILIADOSCOMLOLA", novo:true, desconto:"20% OFF", regra:"Compras acima de <b>R$ 39,90</b> · desconto máximo de <b>R$ 12</b>", cat:"marcas", cat2:"beleza",  link:"https://meli.la/1Bfqd9n"},
+  {codigo:"AFILIADOSCOMBIODERMA", novo:true, desconto:"20% OFF", regra:"Compras acima de <b>R$ 189,90</b> · desconto máximo de <b>R$ 89</b>", cat:"marcas", cat2:"beleza",  link:"https://meli.la/23RTJVr"},
+  {codigo:"ISDIN15D",         novo:true, desconto:"15% OFF", regra:"Compras acima de <b>R$ 5</b> · desconto máximo de <b>R$ 150</b>", cat:"marcas", cat2:"beleza",  link:"https://meli.la/2fTzfwe"},
+  {codigo:"AFILIADOSCOMSALLVE", novo:true, desconto:"15% OFF", regra:"Compras acima de <b>R$ 99,90</b> · desconto máximo de <b>R$ 44,90</b>", cat:"marcas", cat2:"beleza",  link:"https://meli.la/1CVZDgo"},
   {codigo:"BIKEMINIONS1P",    novo:true, desconto:"15% OFF", regra:"Compras acima de <b>R$ 100</b> · desconto máximo de <b>R$ 180</b>", cat:"marcas",  link:"https://meli.la/1EY24GM"},
   {codigo:"COSCOKIDS15",      novo:true, desconto:"15% OFF", regra:"Compras acima de <b>R$ 450</b> · desconto máximo de <b>R$ 100</b>", cat:"marcas",  link:"https://meli.la/2biGgC8"},
   {codigo:"TVCASASBAHIA",     desconto:"10% OFF", regra:"Compras acima de <b>R$ 199</b> · desconto máximo de <b>R$ 300</b>", cat:"marcas",       link:"https://meli.la/2CTaXCr"},
@@ -681,9 +681,9 @@ const CATEGORIAS = {
   casa:"🏠 Casa & Decoração",
   beleza:"💄 Beleza",
   eletro:"📺 Eletrônicos",
-  internacional:"✈️ Internacional",
   outros:"🎁 Outros",
-  marcas:"🏷️ Marcas"
+  marcas:"🏷️ Marcas",
+  internacional:"✈️ Internacional"
 };
 
 const filtrosEl = document.getElementById('filtros');
@@ -701,7 +701,7 @@ let termoBusca = '';
 
 function montarFiltros(){
   Object.entries(CATEGORIAS).forEach(([chave,rotulo])=>{
-    const temCupom = chave==='todos' || ATIVOS.some(c=>c.cat===chave);
+    const temCupom = chave==='todos' || ATIVOS.some(c=>c.cat===chave || c.cat2===chave);
     if(!temCupom) return;
     const btn = document.createElement('button');
     btn.className = 'chip' + (chave===filtroAtivo?' ativo':'');
@@ -717,7 +717,7 @@ function montarFiltros(){
 }
 
 function renderizar(){
-  let lista = filtroAtivo==='todos' ? ATIVOS : ATIVOS.filter(c=>c.cat===filtroAtivo);
+  let lista = filtroAtivo==='todos' ? ATIVOS : ATIVOS.filter(c=>c.cat===filtroAtivo || c.cat2===filtroAtivo);
   if(termoBusca){
     lista = lista.filter(c=>c.codigo.toLowerCase().includes(termoBusca));
   }
