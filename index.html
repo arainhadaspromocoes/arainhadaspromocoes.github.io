@@ -539,7 +539,7 @@
         <p>Cupons do Mercado Livre com todas as regras, sem pegadinha. Copie, cole no carrinho e economize.</p>
         <div class="etiquetas">
           <span class="etiqueta roxa" id="abrir-tutorial">🎬 Como usar o cupom</span>
-          <span class="etiqueta roxa" id="pilula-total" data-alvo="#secao-filtros">🎟️ 21 cupons ativos · atualizado 01/08</span>
+          <span class="etiqueta roxa" id="pilula-total" data-alvo="#secao-filtros">🎟️ 25 cupons ativos · atualizado 01/08</span>
         </div>
         <div class="linha-ig linha-ig-titulo">
           <a class="etiqueta amarela" href="https://www.instagram.com/arainhadaspromocoes" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" style="vertical-align:-4px"><defs><linearGradient id="igg" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#feda75"/><stop offset="25%" stop-color="#fa7e1e"/><stop offset="50%" stop-color="#d62976"/><stop offset="75%" stop-color="#962fbf"/><stop offset="100%" stop-color="#4f5bd5"/></linearGradient></defs><rect width="24" height="24" rx="6" fill="url(#igg)"/><rect x="4.6" y="4.6" width="14.8" height="14.8" rx="4" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="12" cy="12" r="3.6" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="16.6" cy="7.4" r="1.15" fill="#fff"/></svg> @arainhadaspromocoes</a>
@@ -636,13 +636,17 @@
 const CUPONS = [
   {codigo:"QUEROPROMO",       destaque:true, vence:"2026-08-02", desconto:"25% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 100</b>", cat:"geral",  link:"https://meli.la/1bZQFE2"},
   {codigo:"OFERTAS",          destaque:true, novo:true, vence:"2026-08-02", desconto:"25% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 100</b>", cat:"geral",  link:"https://meli.la/2QTXRSb"},
+  {codigo:"CASAPROMO",        novo:true, vence:"2026-08-04", desconto:"25% OFF", regra:"Compras acima de <b>R$ 19</b> · desconto máximo de <b>R$ 150</b>", cat:"casa",  link:"https://meli.la/1vArveC"},
   {codigo:"CUPOMNOML",        destaque:true, vence:"2026-08-02", desconto:"22% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 100</b>", cat:"geral",  link:"https://meli.la/2ofg6DD"},
   {codigo:"MELIACHA", vence:"2026-08-02", desconto:"22% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 100</b>", cat:"geral",  link:"https://meli.la/2JNKdxo"},
   {codigo:"CASACOREMELI",     desconto:"20% OFF", regra:"Compras acima de <b>R$ 79</b> · desconto máximo de <b>R$ 80</b>", cat:"casa",           link:"https://meli.la/21tZoP8"},
   {codigo:"DESCONTODOML",     novo:true, vence:"2026-08-02", desconto:"20% OFF", regra:"Compras acima de <b>R$ 79</b> · desconto máximo de <b>R$ 100</b>", cat:"geral",  link:"https://meli.la/2YcuQXk"},
-  {codigo:"MIMOPARAVOCE",     novo:true, desconto:"20% OFF", regra:"Compras acima de <b>R$ 19</b> · desconto máximo de <b>R$ 150</b>", cat:"geral",  link:"https://meli.la/149DcW3"},
-  {codigo:"CUPOMDOMELI",      novo:true, desconto:"20% OFF", regra:"Compras acima de <b>R$ 19</b> · desconto máximo de <b>R$ 150</b>", cat:"geral",  link:"https://meli.la/2ixH98q"},
-  {codigo:"ECONOMIZE",        novo:true, desconto:"20% OFF", regra:"Compras acima de <b>R$ 19</b> · desconto máximo de <b>R$ 150</b>", cat:"geral",  link:"https://meli.la/2mmpg4v"},
+  {codigo:"MIMOPARAVOCE",     novo:true, vence:"2026-08-07", desconto:"20% OFF", regra:"Compras acima de <b>R$ 19</b> · desconto máximo de <b>R$ 150</b>", cat:"geral",  link:"https://meli.la/2qdxQq3"},
+  {codigo:"CUPOMDOMELI",      novo:true, vence:"2026-08-07", desconto:"20% OFF", regra:"Compras acima de <b>R$ 19</b> · desconto máximo de <b>R$ 150</b>", cat:"geral",  link:"https://meli.la/1WoQ1Fb"},
+  {codigo:"ECONOMIZE",        novo:true, vence:"2026-08-07", desconto:"20% OFF", regra:"Compras acima de <b>R$ 19</b> · desconto máximo de <b>R$ 150</b>", cat:"geral",  link:"https://meli.la/2q7prgi"},
+  {codigo:"QUEROPROMOML",     novo:true, vence:"2026-08-07", desconto:"20% OFF", regra:"Compras acima de <b>R$ 19</b> · desconto máximo de <b>R$ 150</b>", cat:"geral",  link:"https://meli.la/2y9nCT7"},
+  {codigo:"CORREAQUI",        novo:true, vence:"2026-08-07", desconto:"20% OFF", regra:"Compras acima de <b>R$ 19</b> · desconto máximo de <b>R$ 150</b>", cat:"geral",  link:"https://meli.la/1pZXVeu"},
+  {codigo:"FASHIONML",        novo:true, vence:"2026-08-04", desconto:"18% OFF", regra:"Compras acima de <b>R$ 19</b> · desconto máximo de <b>R$ 60</b>", cat:"moda",  link:"https://meli.la/1JFwVXJ"},
   {codigo:"SPORTS8DO8",       novo:true, desconto:"15% OFF", regra:"Compras acima de <b>R$ 259</b> · desconto máximo de <b>R$ 147</b>", cat:"outros",  link:"https://meli.la/1bpDD3h"},
   {codigo:"SOFA10",           desconto:"10% OFF", regra:"Compras acima de <b>R$ 199</b> · desconto máximo de <b>R$ 150</b>", cat:"casa",         link:"https://meli.la/2iiemJZ"},
   {codigo:"GUARDA10",         desconto:"10% OFF", regra:"Compras acima de <b>R$ 199</b> · desconto máximo de <b>R$ 150</b>", cat:"casa",         link:"https://meli.la/2TW4f7s"},
