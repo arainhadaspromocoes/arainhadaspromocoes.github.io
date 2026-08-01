@@ -539,7 +539,7 @@
         <p>Cupons do Mercado Livre com todas as regras, sem pegadinha. Copie, cole no carrinho e economize.</p>
         <div class="etiquetas">
           <span class="etiqueta roxa" id="abrir-tutorial">🎬 Como usar o cupom</span>
-          <span class="etiqueta roxa" id="pilula-total" data-alvo="#secao-filtros">🎟️ 37 cupons ativos · atualizado 31/07</span>
+          <span class="etiqueta roxa" id="pilula-total" data-alvo="#secao-filtros">🎟️ 39 cupons ativos · atualizado 31/07</span>
         </div>
         <div class="linha-ig linha-ig-titulo">
           <a class="etiqueta amarela" href="https://www.instagram.com/arainhadaspromocoes" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" style="vertical-align:-4px"><defs><linearGradient id="igg" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#feda75"/><stop offset="25%" stop-color="#fa7e1e"/><stop offset="50%" stop-color="#d62976"/><stop offset="75%" stop-color="#962fbf"/><stop offset="100%" stop-color="#4f5bd5"/></linearGradient></defs><rect width="24" height="24" rx="6" fill="url(#igg)"/><rect x="4.6" y="4.6" width="14.8" height="14.8" rx="4" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="12" cy="12" r="3.6" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="16.6" cy="7.4" r="1.15" fill="#fff"/></svg> @arainhadaspromocoes</a>
@@ -635,6 +635,7 @@
 // DATA_VERIF agora é automática — definida logo após HOJE, sempre com a data vigente no Brasil.
 const CUPONS = [
   {codigo:"LIQUIDA30",        destaque:true, vence:"2026-07-31", desconto:"30% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 1.000</b>", cat:"geral",       link:"https://meli.la/19KJjyK"},
+  {codigo:"DECORELETRO3107",  novo:true, desconto:"30% OFF", regra:"Compras acima de <b>R$ 59</b> · desconto máximo de <b>R$ 20</b>", cat:"casa",  link:"https://meli.la/2uLBr1P"},
   {codigo:"QUEROPROMO",       destaque:true, vence:"2026-08-02", desconto:"25% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 100</b>", cat:"geral",  link:"https://meli.la/1bZQFE2"},
   {codigo:"OFERTAS",          destaque:true, novo:true, vence:"2026-08-02", desconto:"25% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 100</b>", cat:"geral",  link:"https://meli.la/2QTXRSb"},
   {codigo:"CONSTRUIRML",      novo:true, vence:"2026-07-31", desconto:"25% OFF", regra:"Compras acima de <b>R$ 19</b> · desconto máximo de <b>R$ 150</b>", cat:"casa",    link:"https://meli.la/1Y45hab"},
@@ -647,6 +648,7 @@ const CUPONS = [
   {codigo:"MODALIVRE", vence:"2026-07-31", desconto:"20% OFF", regra:"Compras acima de <b>R$ 49</b> · desconto máximo de <b>R$ 60</b>", cat:"moda",    link:"https://meli.la/2M7EPmL"},
   {codigo:"CASACOREMELI",     desconto:"20% OFF", regra:"Compras acima de <b>R$ 79</b> · desconto máximo de <b>R$ 80</b>", cat:"casa",           link:"https://meli.la/21tZoP8"},
   {codigo:"DESCONTODOML",     novo:true, vence:"2026-08-02", desconto:"20% OFF", regra:"Compras acima de <b>R$ 79</b> · desconto máximo de <b>R$ 100</b>", cat:"geral",  link:"https://meli.la/2YcuQXk"},
+  {codigo:"LIVROSJOGOS3107",  novo:true, desconto:"20% OFF", regra:"Compras acima de <b>R$ 79</b> · desconto máximo de <b>R$ 30</b>", cat:"outros",  link:"https://meli.la/2GB6kJz"},
   {codigo:"MODAPRAVC", vence:"2026-07-31", desconto:"18% OFF", regra:"Compras acima de <b>R$ 49</b> · desconto máximo de <b>R$ 60</b>", cat:"moda",    link:"https://meli.la/26mCo9o"},
   {codigo:"15OFFINTERNACIONAL",desconto:"15% OFF",regra:"Compras acima de <b>R$ 50</b> · desconto máximo de <b>R$ 25</b>", cat:"internacional",  link:"https://meli.la/1f8GnJ3"},
   {codigo:"MLTREINO",         novo:true, vence:"2026-07-31", desconto:"15% OFF", regra:"Compras acima de <b>R$ 59</b> · desconto máximo de <b>R$ 50</b>", cat:"outros",  link:"https://meli.la/1uSivJk"},
