@@ -634,6 +634,13 @@
    ============================================================ */
 // DATA_VERIF agora é automática — definida logo após HOJE, sempre com a data vigente no Brasil.
 const CUPONS = [
+  {codigo:"APROVEITAHOJE",    novo:true, vence:"2026-08-08", desconto:"25% OFF", regra:"Compras acima de <b>R$ 19</b> · desconto máximo de <b>R$ 150</b>", cat:"casa",   link:"https://meli.la/2RfRb3T"},
+  {codigo:"MODANOMELI",       novo:true, vence:"2026-08-08", desconto:"20% OFF", regra:"Compras acima de <b>R$ 19</b> · desconto máximo de <b>R$ 60</b>", cat:"moda",    link:"https://meli.la/2Wy19nE"},
+  {codigo:"QUEROCUPOM",       novo:true, vence:"2026-08-12", desconto:"20% OFF", regra:"Compras acima de <b>R$ 19</b> · desconto máximo de <b>R$ 150</b>", cat:"outros", link:"https://meli.la/2hdUhzX"},
+  {codigo:"OFFMELI",          novo:true, vence:"2026-08-12", desconto:"20% OFF", regra:"Compras acima de <b>R$ 19</b> · desconto máximo de <b>R$ 150</b>", cat:"outros", link:"https://meli.la/1C9WaJ4"},
+  {codigo:"TOMACUPOM",        novo:true, vence:"2026-08-12", desconto:"20% OFF", regra:"Compras acima de <b>R$ 19</b> · desconto máximo de <b>R$ 150</b>", cat:"outros", link:"https://meli.la/22eKvdX"},
+  {codigo:"GANHEIMAIS",       novo:true, vence:"2026-08-12", desconto:"20% OFF", regra:"Compras acima de <b>R$ 19</b> · desconto máximo de <b>R$ 150</b>", cat:"outros", link:"https://meli.la/2K5yQ8f"},
+  {codigo:"TAMOJUNTO",        novo:true, vence:"2026-08-12", desconto:"20% OFF", regra:"Compras acima de <b>R$ 19</b> · desconto máximo de <b>R$ 150</b>", cat:"outros", link:"https://meli.la/2V3p5t1"},
   {codigo:"CASACOREMELI",     desconto:"20% OFF", regra:"Compras acima de <b>R$ 79</b> · desconto máximo de <b>R$ 80</b>", cat:"casa",           link:"https://meli.la/21tZoP8"},
   {codigo:"SPORTS8DO8",       novo:true, desconto:"15% OFF", regra:"Compras acima de <b>R$ 259</b> · desconto máximo de <b>R$ 147</b>", cat:"outros",  link:"https://meli.la/1bpDD3h"},
   {codigo:"SOFA10",           desconto:"10% OFF", regra:"Compras acima de <b>R$ 199</b> · desconto máximo de <b>R$ 150</b>", cat:"casa",         link:"https://meli.la/2iiemJZ"},
@@ -651,13 +658,6 @@ const CUPONS = [
   {codigo:"MAISCUPONS",       novo:true, vence:"2026-08-12", desconto:"25% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral",  link:"https://meli.la/151gxte"},
   {codigo:"INTERNACIONALSALE", novo:true, desconto:"18% OFF", regra:"Compras acima de <b>R$ 49</b> · desconto máximo de <b>R$ 30</b>", cat:"internacional",  link:"https://meli.la/1d43eKz"},
   {codigo:"BRINCAR",           novo:true, vence:"2026-08-09", desconto:"15% OFF", regra:"Compras acima de <b>R$ 59</b> · desconto máximo de <b>R$ 50</b>", cat:"outros",  link:"https://meli.la/1W5d5cw"},
-  {codigo:"MODANOMELI",       novo:true, vence:"2026-08-08", desconto:"20% OFF", regra:"Compras acima de <b>R$ 19</b> · desconto máximo de <b>R$ 60</b>", cat:"moda",    link:"https://meli.la/2Wy19nE"},
-  {codigo:"APROVEITAHOJE",    novo:true, vence:"2026-08-08", desconto:"25% OFF", regra:"Compras acima de <b>R$ 19</b> · desconto máximo de <b>R$ 150</b>", cat:"casa",   link:"https://meli.la/2RfRb3T"},
-  {codigo:"QUEROCUPOM",       novo:true, vence:"2026-08-12", desconto:"20% OFF", regra:"Compras acima de <b>R$ 19</b> · desconto máximo de <b>R$ 150</b>", cat:"outros", link:"https://meli.la/2hdUhzX"},
-  {codigo:"OFFMELI",          novo:true, vence:"2026-08-12", desconto:"20% OFF", regra:"Compras acima de <b>R$ 19</b> · desconto máximo de <b>R$ 150</b>", cat:"outros", link:"https://meli.la/1C9WaJ4"},
-  {codigo:"TOMACUPOM",        novo:true, vence:"2026-08-12", desconto:"20% OFF", regra:"Compras acima de <b>R$ 19</b> · desconto máximo de <b>R$ 150</b>", cat:"outros", link:"https://meli.la/22eKvdX"},
-  {codigo:"GANHEIMAIS",       novo:true, vence:"2026-08-12", desconto:"20% OFF", regra:"Compras acima de <b>R$ 19</b> · desconto máximo de <b>R$ 150</b>", cat:"outros", link:"https://meli.la/2K5yQ8f"},
-  {codigo:"TAMOJUNTO",        novo:true, vence:"2026-08-12", desconto:"20% OFF", regra:"Compras acima de <b>R$ 19</b> · desconto máximo de <b>R$ 150</b>", cat:"outros", link:"https://meli.la/2V3p5t1"},
   /* ===== MARCAS — sempre por último ===== */
   {codigo:"COSCOKIDS15",      novo:true, desconto:"15% OFF", regra:"Compras acima de <b>R$ 450</b> · desconto máximo de <b>R$ 100</b>", cat:"marcas",  link:"https://meli.la/2biGgC8"},
   {codigo:"TVCASASBAHIA",     desconto:"10% OFF", regra:"Compras acima de <b>R$ 199</b> · desconto máximo de <b>R$ 300</b>", cat:"marcas",       link:"https://meli.la/2CTaXCr"},
