@@ -635,12 +635,10 @@
 // DATA_VERIF agora é automática — definida logo após HOJE, sempre com a data vigente no Brasil.
 const CUPONS = [
   {codigo:"CASACOREMELI",     desconto:"20% OFF", regra:"Compras acima de <b>R$ 79</b> · desconto máximo de <b>R$ 80</b>", cat:"casa",           link:"https://meli.la/21tZoP8"},
-  {codigo:"QUEROPROMOML",     novo:true, vence:"2026-08-07", desconto:"20% OFF", regra:"Compras acima de <b>R$ 19</b> · desconto máximo de <b>R$ 150</b>", cat:"geral",  link:"https://meli.la/2y9nCT7"},
   {codigo:"SPORTS8DO8",       novo:true, desconto:"15% OFF", regra:"Compras acima de <b>R$ 259</b> · desconto máximo de <b>R$ 147</b>", cat:"outros",  link:"https://meli.la/1bpDD3h"},
   {codigo:"SOFA10",           desconto:"10% OFF", regra:"Compras acima de <b>R$ 199</b> · desconto máximo de <b>R$ 150</b>", cat:"casa",         link:"https://meli.la/2iiemJZ"},
   {codigo:"GUARDA10",         desconto:"10% OFF", regra:"Compras acima de <b>R$ 199</b> · desconto máximo de <b>R$ 150</b>", cat:"casa",         link:"https://meli.la/2TW4f7s"},
   {codigo:"COLCHAO10",        desconto:"10% OFF", regra:"Compras acima de <b>R$ 199</b> · desconto máximo de <b>R$ 150</b>", cat:"casa",         link:"https://meli.la/18tejiU"},
-  {codigo:"PIPOCA",           novo:true, desconto:"10% OFF", regra:"Compras acima de <b>R$ 50</b> · desconto máximo de <b>R$ 10</b>", cat:"geral",  link:"https://mercadolivre.com/sec/2mHJuuY"},
   {codigo:"DESCOTOSMELI",     novo:true, vence:"2026-08-12", desconto:"25% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral",  link:"https://meli.la/2aP6xPA"},
   {codigo:"SUPERPROMO",       novo:true, vence:"2026-08-12", desconto:"20% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral",  link:"https://meli.la/13dgP66"},
   {codigo:"HORADOCUPOM",      novo:true, vence:"2026-08-12", desconto:"18% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral",  link:"https://meli.la/1Jp4ikj"},
@@ -649,35 +647,14 @@ const CUPONS = [
   {codigo:"QUEROCUPONS",      novo:true, vence:"2026-08-12", desconto:"25% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral",  link:"https://meli.la/33Nf25C"},
   {codigo:"QUEROPROMOS",      novo:true, vence:"2026-08-12", desconto:"25% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral",  link:"https://meli.la/1WkToZN"},
   {codigo:"MAISOFERTAS",      novo:true, vence:"2026-08-12", desconto:"18% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral",  link:"https://meli.la/1TGjEdB"},
-  {codigo:"CASAPROMO",        novo:true, vence:"2026-08-04", desconto:"25% OFF", regra:"Compras acima de <b>R$ 19</b> · desconto máximo de <b>R$ 150</b>", cat:"casa",  link:"https://mercadolivre.com/sec/2mHJuuY"},
-  {codigo:"FASHIONML",        novo:true, vence:"2026-08-04", desconto:"18% OFF", regra:"Compras acima de <b>R$ 19</b> · desconto máximo de <b>R$ 60</b>", cat:"moda",  link:"https://mercadolivre.com/sec/2mHJuuY"},
-  {codigo:"CORREML",          novo:true, vence:"2026-08-07", desconto:"20% OFF", regra:"Compras acima de <b>R$ 59</b> · desconto máximo de <b>R$ 50</b>", cat:"geral",  link:"https://mercadolivre.com/sec/2mHJuuY"},
-  {codigo:"MLTEMSAUDE",       novo:true, vence:"2026-08-07", desconto:"15% OFF", regra:"Compras acima de <b>R$ 59</b> · desconto máximo de <b>R$ 50</b>", cat:"geral",  link:"https://mercadolivre.com/sec/2mHJuuY"},
   {codigo:"MAISPORMENOS",     novo:true, vence:"2026-08-12", desconto:"22% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral",  link:"https://meli.la/1UaAiWQ"},
   {codigo:"MAISCUPONS",       novo:true, vence:"2026-08-12", desconto:"25% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral",  link:"https://meli.la/151gxte"},
-  {codigo:"ESPORTESML",       novo:true, vence:"2026-08-07", desconto:"15% OFF", regra:"Compras acima de <b>R$ 59</b> · desconto máximo de <b>R$ 50</b>", cat:"geral",  link:"https://mercadolivre.com/sec/2mHJuuY"},
-  {codigo:"PROMOPRAVC",       novo:true, vence:"2026-08-07", desconto:"15% OFF", regra:"Compras acima de <b>R$ 59</b> · desconto máximo de <b>R$ 50</b>", cat:"geral",  link:"https://mercadolivre.com/sec/2mHJuuY"},
-  {codigo:"CELULARTECHRELAMPAGO", novo:true, desconto:"R$ 100 OFF", regra:"Compras acima de <b>R$ 899</b>", cat:"eletro",  link:"https://mercadolivre.com/sec/2mHJuuY"},
-  {codigo:"MODASEMPRE",       novo:true, vence:"2026-08-07", desconto:"18% OFF", regra:"Compras acima de <b>R$ 19</b> · desconto máximo de <b>R$ 60</b>", cat:"moda",  link:"https://meli.la/29Ycvk7"},
-  {codigo:"OFFPARACASA",      novo:true, vence:"2026-08-07", desconto:"25% OFF", regra:"Compras acima de <b>R$ 19</b> · desconto máximo de <b>R$ 150</b>", cat:"casa",  link:"https://meli.la/1CqLnc9"},
-  {codigo:"FULL5DO8",         novo:true, desconto:"15% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 20</b> · Válido apenas para produtos com entrega <b>FULL</b>", cat:"outros",  link:"https://meli.la/2EbAbqn"},
-  {codigo:"TUDOPRASUACASA5DO8", novo:true, desconto:"R$ 150 OFF", regra:"Compras acima de <b>R$ 899</b>", cat:"casa",  link:"https://meli.la/1Rte9wN"},
-  {codigo:"DECORACAO8DO8",     novo:true, desconto:"25% OFF", regra:"Compras acima de <b>R$ 49</b> · desconto máximo de <b>R$ 30</b>", cat:"casa",  link:"https://meli.la/2kk9Ppt"},
-  {codigo:"TVS6DO8",           novo:true, desconto:"15% OFF", regra:"Compras acima de <b>R$ 899</b> · desconto máximo de <b>R$ 189</b>", cat:"eletro",  link:"https://meli.la/2bALtVV"},
-  {codigo:"PROMOFACIL",        novo:true, desconto:"25% OFF", regra:"Compras acima de <b>R$ 59</b> · desconto máximo de <b>R$ 100</b>", cat:"outros",  link:"https://meli.la/1PuKstb"},
-  {codigo:"FULL6DO8",          novo:true, desconto:"15% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 20</b> · Válido apenas para produtos com entrega <b>FULL</b>", cat:"outros",  link:"https://meli.la/2HY9QR7"},
-  {codigo:"OFICIALMODA",       novo:true, desconto:"20% OFF", regra:"Compras acima de <b>R$ 19</b> · desconto máximo de <b>R$ 60</b>", cat:"moda",  link:"https://meli.la/2xSdUBp"},
-  {codigo:"TECH6DO8",          novo:true, desconto:"R$ 100 OFF", regra:"Compras acima de <b>R$ 899</b>", cat:"eletro",  link:"https://meli.la/2VvSstQ"},
-  {codigo:"SUPERMERCADO6DO8",  novo:true, desconto:"25% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 30</b>", cat:"geral",  link:"https://meli.la/2GG2T4n"},
   {codigo:"INTERNACIONALSALE", novo:true, desconto:"18% OFF", regra:"Compras acima de <b>R$ 49</b> · desconto máximo de <b>R$ 30</b>", cat:"internacional",  link:"https://meli.la/1d43eKz"},
   /* ===== MARCAS — sempre por último ===== */
-  {codigo:"BIKEMINIONS1P",    novo:true, desconto:"15% OFF", regra:"Compras acima de <b>R$ 100</b> · desconto máximo de <b>R$ 180</b>", cat:"marcas",  link:"https://meli.la/1EY24GM"},
   {codigo:"COSCOKIDS15",      novo:true, desconto:"15% OFF", regra:"Compras acima de <b>R$ 450</b> · desconto máximo de <b>R$ 100</b>", cat:"marcas",  link:"https://meli.la/2biGgC8"},
   {codigo:"TVCASASBAHIA",     desconto:"10% OFF", regra:"Compras acima de <b>R$ 199</b> · desconto máximo de <b>R$ 300</b>", cat:"marcas",       link:"https://meli.la/2CTaXCr"},
   {codigo:"CELUCB",           desconto:"10% OFF", regra:"Compras acima de <b>R$ 700</b> · desconto máximo de <b>R$ 500</b>", cat:"marcas",       link:"https://meli.la/1pqkRLt"},
-  {codigo:"LOJAOTVCB100",     novo:true, desconto:"R$ 100 OFF", regra:"Compras acima de <b>R$ 1.000</b>", cat:"marcas",  link:"https://meli.la/12TiyCB"},
   {codigo:"LOJAOTVCB250",     novo:true, desconto:"R$ 250 OFF", regra:"Compras acima de <b>R$ 2.000</b>", cat:"marcas",  link:"https://meli.la/2PRrv3U"},
-  {codigo:"LOJAOTVCB500",     novo:true, desconto:"R$ 500 OFF", regra:"Compras acima de <b>R$ 3.000</b>", cat:"marcas",  link:"https://meli.la/1YsVGfU"}
 ];
 
 const CATEGORIAS = {
