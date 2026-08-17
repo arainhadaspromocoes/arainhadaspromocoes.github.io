@@ -634,6 +634,8 @@
    ============================================================ */
 // DATA_VERIF agora é automática — definida logo após HOJE, sempre com a data vigente no Brasil.
 const CUPONS = [
+  {codigo:"PRAVCSEMPRE",     novo:true, desconto:"25% OFF", regra:"Compras acima de <b>R$ 19</b> · desconto máximo de <b>R$ 150</b>", cat:"geral",  link:"https://meli.la/2Fb4tAX"},
+  {codigo:"CASAML",           novo:true, vence:"2026-08-23", desconto:"25% OFF", regra:"Compras acima de <b>R$ 19</b> · desconto máximo de <b>R$ 150</b>", cat:"casa",  link:"https://meli.la/2XZgwjZ"},
   {codigo:"DESCOTOSMELI",    novo:true, vence:"2026-08-12", desconto:"25% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral",  link:"https://meli.la/2aP6xPA"},
   {codigo:"MAISCUPONS",       novo:true, vence:"2026-08-16", desconto:"25% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral",  link:"https://meli.la/1zCjX9s"},
   {codigo:"QUEROCUPONS",      novo:true, vence:"2026-08-16", desconto:"25% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral",  link:"https://meli.la/1GA2NJd"},
@@ -642,6 +644,8 @@ const CUPONS = [
   {codigo:"MAYBELLINEMELI",   novo:true, desconto:"25% OFF", regra:"Compras acima de <b>R$ 99,90</b> · desconto máximo de <b>R$ 40</b>", cat:"beleza",  link:"https://meli.la/2HcjbMG"},
   {codigo:"ECONOMIAML",       novo:true, vence:"2026-08-16", desconto:"22% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral",  link:"https://meli.la/2VsrVTX"},
   {codigo:"MAISPORMENOS",     novo:true, vence:"2026-08-12", desconto:"22% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral",  link:"https://meli.la/1UaAiWQ"},
+  {codigo:"SAUDEPRAVC",      novo:true, desconto:"20% OFF", regra:"Compras acima de <b>R$ 19</b> · desconto máximo de <b>R$ 150</b>", cat:"beleza",  link:"https://meli.la/12p1gAY"},
+  {codigo:"SEMPRENAMODA",    novo:true, vence:"2026-08-20", desconto:"20% OFF", regra:"Compras acima de <b>R$ 19</b> · desconto máximo de <b>R$ 60</b>", cat:"moda",  link:"https://meli.la/1uxb8a1"},
   {codigo:"SUPERPROMO",       novo:true, vence:"2026-08-12", desconto:"20% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral",  link:"https://meli.la/13dgP66"},
   {codigo:"SHOWDEPROMO",      novo:true, vence:"2026-08-12", desconto:"20% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral",  link:"https://meli.la/1eza1yP"},
   {codigo:"HORADOCUPOM",     novo:true, vence:"2026-08-12", desconto:"18% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral",  link:"https://meli.la/1Jp4ikj"},
@@ -649,7 +653,9 @@ const CUPONS = [
   {codigo:"INTERNACIONALSALE", novo:true, desconto:"18% OFF", regra:"Compras acima de <b>R$ 49</b> · desconto máximo de <b>R$ 30</b>", cat:"internacional",  link:"https://meli.la/1d43eKz"},
   {codigo:"DARROW15",         novo:true, desconto:"15% OFF", regra:"Compras acima de <b>R$ 5</b> · desconto máximo de <b>R$ 150</b>", cat:"beleza",  link:"https://meli.la/2uEMXbf"},
   {codigo:"AVENE15",          novo:true, desconto:"15% OFF", regra:"Compras acima de <b>R$ 5</b> · desconto máximo de <b>R$ 150</b>", cat:"beleza",  link:"https://meli.la/2eYWLch"},
+  {codigo:"BRINCADEIRAS",    novo:true, vence:"2026-08-23", desconto:"15% OFF", regra:"Compras acima de <b>R$ 59</b> · desconto máximo de <b>R$ 50</b>", cat:"outros",  link:"https://meli.la/2tcqmjx"},
   {codigo:"SAMSUNG15OFF",     novo:true, desconto:"15% OFF", regra:"Compras acima de <b>R$ 700</b> · desconto máximo de <b>R$ 111</b>", cat:"eletro",  link:"https://meli.la/2ddGpif"},
+  {codigo:"AQUITEM",          novo:true, vence:"2026-08-20", desconto:"10% OFF", regra:"Compras acima de <b>R$ 129</b> · desconto máximo de <b>R$ 150</b>", cat:"eletro",  link:"https://meli.la/1EbAo2a"},
   {codigo:"SOFA10",           desconto:"10% OFF", regra:"Compras acima de <b>R$ 199</b> · desconto máximo de <b>R$ 150</b>", cat:"casa",         link:"https://meli.la/2iiemJZ"},
   {codigo:"GUARDA10",         desconto:"10% OFF", regra:"Compras acima de <b>R$ 199</b> · desconto máximo de <b>R$ 150</b>", cat:"casa",         link:"https://meli.la/2TW4f7s"},
   {codigo:"COLCHAO10",        desconto:"10% OFF", regra:"Compras acima de <b>R$ 199</b> · desconto máximo de <b>R$ 150</b>", cat:"casa",         link:"https://meli.la/18tejiU"},
