@@ -635,9 +635,12 @@
 // DATA_VERIF agora é automática — definida logo após HOJE, sempre com a data vigente no Brasil.
 const CUPONS = [
 {codigo:"LIQUIDA30", novo:true, desconto:"30% OFF", regra:"Desconto máximo de <b>R$ 1.000</b>", cat:"geral", link:"https://meli.la/2hQC4st"},{codigo:"DESCONTEI", novo:true, desconto:"30% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1JKhX8A"},{codigo:"ECONOMIZEI", novo:true, desconto:"30% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/2cAyBRP"},
+{codigo:"VALEAGORA", novo:true, desconto:"30% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/2MZdWCL"},
+{codigo:"PRECINHO", novo:true, desconto:"30% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/17dWcB8"},
 {codigo:"CONSTROINOML", novo:true, desconto:"25% OFF", regra:"Compras acima de <b>R$ 19</b> · desconto máximo de <b>R$ 100</b>", cat:"geral", link:"https://meli.la/2oQAM8P"},{codigo:"DESCOTOSMELI", novo:true, desconto:"25% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/2aP6xPA"},
 {codigo:"MAISCUPONS", novo:true, desconto:"25% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1zCjX9s"},
 {codigo:"QUEROCUPONS", novo:true, desconto:"25% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1GA2NJd"},{codigo:"SOECONOMIA", novo:true, desconto:"25% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/2Rqi5w1"},{codigo:"POUPAAGORA", novo:true, desconto:"25% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/2Cck8kS"},
+{codigo:"PEGUEISEU", novo:true, desconto:"25% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/2H1H6Co"},
 {codigo:"ECONOMIAML", novo:true, desconto:"22% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/2VsrVTX"},
 {codigo:"MAISPORMENOS", novo:true, desconto:"22% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1UaAiWQ"},
 {codigo:"SHOWDEPROMO", novo:true, desconto:"20% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1eza1yP"},
@@ -648,13 +651,17 @@ const CUPONS = [
  {codigo:"PROMOPRAMODA", novo:true, desconto:"15% OFF", regra:"Compras acima de <b>R$ 79</b> · desconto máximo de <b>R$ 50</b>", cat:"moda", link:"https://meli.la/1E6M1dD"},
 {codigo:"SAMSUNG15OFF", novo:true, desconto:"15% OFF", regra:"Compras acima de <b>R$ 700</b> · desconto máximo de <b>R$ 111</b>", cat:"eletro", link:"https://meli.la/2ddGpif"},
   {codigo:"PROMOCERTA", novo:true, desconto:"12% OFF", regra:"Compras acima de <b>R$ 79</b> · desconto máximo de <b>R$ 100</b>", cat:"casa", link:"https://meli.la/1QH3FhH"},
+{codigo:"QUEROOFERTA", novo:true, desconto:"10% OFF", regra:"Compras acima de <b>R$ 149</b> · desconto máximo de <b>R$ 200</b>", cat:"eletro", link:"https://meli.la/2ppqPYP"},
   {codigo:"SOFA10", desconto:"10% OFF", regra:"Compras acima de <b>R$ 199</b> · desconto máximo de <b>R$ 150</b>", cat:"casa", link:"https://meli.la/2iiemJZ"},
 {codigo:"GUARDA10", desconto:"10% OFF", regra:"Compras acima de <b>R$ 199</b> · desconto máximo de <b>R$ 150</b>", cat:"casa", link:"https://meli.la/2TW4f7s"},
 {codigo:"COLCHAO10", desconto:"10% OFF", regra:"Compras acima de <b>R$ 199</b> · desconto máximo de <b>R$ 150</b>", cat:"casa", link:"https://meli.la/18tejiU"},
 {codigo:"SAMSUNG10OFF", novo:true, desconto:"10% OFF", regra:"Compras acima de <b>R$ 900</b> · desconto máximo de <b>R$ 200</b>", cat:"eletro", link:"https://meli.la/2m7iFCV"},{codigo:"OFFCOMMELI", novo:true, desconto:"8% OFF", regra:"Compras acima de <b>R$ 150</b> · desconto máximo de <b>R$ 200</b>", cat:"geral", link:"https://meli.la/2DuNsav"},
+{codigo:"SSG1500", novo:true, desconto:"R$ 1.500 OFF", regra:"Compras acima de <b>R$ 8.000</b>", cat:"eletro", link:"https://meli.la/2LdcE6R"},
+{codigo:"MELHORPROMO", novo:true, desconto:"R$ 200 OFF", regra:"Compras acima de <b>R$ 4.399</b>", cat:"eletro", link:"https://meli.la/13ASWpa"},
 
     /* ===== MARCAS — sempre por último ===== */
 {codigo:"COSCOKIDS15", novo:true, desconto:"15% OFF", regra:"Compras acima de <b>R$ 450</b> · desconto máximo de <b>R$ 100</b>", cat:"marcas", link:"https://meli.la/2biGgC8"},
+{codigo:"COSCO15", novo:true, desconto:"15% OFF", regra:"Compras acima de <b>R$ 450</b> · desconto máximo de <b>R$ 100</b>", cat:"marcas", link:"https://meli.la/2wGeQ71"},
 {codigo:"TVCASASBAHIA", desconto:"10% OFF", regra:"Compras acima de <b>R$ 199</b> · desconto máximo de <b>R$ 300</b>", cat:"marcas", link:"https://meli.la/2CTaXCr"},
 {codigo:"CELUCB", desconto:"10% OFF", regra:"Compras acima de <b>R$ 700</b> · desconto máximo de <b>R$ 500</b>", cat:"marcas", link:"https://meli.la/1pqkRLt"},
   {codigo:"MATRIXMELI", novo:true, desconto:"20% OFF", regra:"Compras acima de <b>R$ 119</b> · desconto máximo de <b>R$ 100</b>", cat:"marcas", link:"https://meli.la/1yZCNtB"},
