@@ -660,13 +660,13 @@
 // DATA_VERIF agora é automática — definida logo após HOJE, sempre com a data vigente no Brasil.
 const CUPONS = [
   {codigo:"DESCONTOEMCASA", desconto:"20% OFF", regra:"Compras acima de <b>R$ 79</b> · desconto máximo de <b>R$ 60</b>", cat:"casa", link:"https://meli.la/1qhCLkm", vence:"2026-09-20"},
-  {codigo:"OFERTANOML", desconto:"10% OFF", regra:"Compras acima de <b>R$ 149</b> · desconto máximo de <b>R$ 200</b> · Tecnologia", cat:"eletro", link:"https://meli.la/1MFPxS4", vence:"2026-09-18"},
   {codigo:"BAIXOUTUDO", desconto:"8% OFF", regra:"Compras acima de <b>R$ 150</b> · desconto máximo de <b>R$ 300</b>", cat:"geral", link:"https://meli.la/2k1sFQB", vence:"2026-09-20"},
   {codigo:"BATEUPRONTOCUPOM", desconto:"30% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/2mxmk39", vence:"2026-10-05"},
   {codigo:"CARRINHOCHEIO", desconto:"22% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/29Jt8er", vence:"2026-09-27"},
   {codigo:"COMPRINHASML", desconto:"22% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1n2eBf2", vence:"2026-10-07"},
   {codigo:"BATEDESCONTO", desconto:"30% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1pTcTya", vence:"2026-10-11"},
   {codigo:"BARRATINHOAQUI", desconto:"25% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1p4vejj", vence:"2026-10-13"},
+  {codigo:"VALEMUITO", desconto:"25% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1Y9jjQm", vence:"2026-10-15"},
   {codigo:"COMPRANOMELI", desconto:"22% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/22v4cQq", vence:"2026-10-13"},
   {codigo:"GARANTINOTOP", desconto:"30% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1JSiTQT", vence:"2026-10-04"},
   {codigo:"VIPAQUI", desconto:"25% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1BKrnMR", vence:"2026-09-27"},
@@ -694,31 +694,26 @@ const CUPONS = [
   {codigo:"COMPRAESPERTA", desconto:"25% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/2SvH169", vence:"2026-10-04"},
   {codigo:"CARRINHOCHEIOJA", desconto:"30% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1zH5wDg", vence:"2026-10-14"},
   {codigo:"APROVEITAESSA", desconto:"20% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1NjBZy1", vence:"2026-10-08"},
-  {codigo:"PAGARPOUCO", desconto:"25% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1vVYstF", vence:"2026-10-04"},
   {codigo:"MLCOMPRANDO", desconto:"30% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/2n89f25", vence:"2026-10-31"},
   {codigo:"CLIENTETOP", desconto:"22% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1ttym5N", vence:"2026-09-20"},
   {codigo:"SALVEIESSA", desconto:"25% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/23vciZN", vence:"2026-09-30"},
   {codigo:"TACOMVC", desconto:"30% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/11b82tE", vence:"2026-09-29"},
-  {codigo:"PEGUEIJA", desconto:"22% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/29vmPGa", vence:"2026-09-18"},
-  {codigo:"CHEGOUCUPOM", desconto:"25% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1iXtTQP", vence:"2026-09-18"},
   {codigo:"AGORAVAI", desconto:"25% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1RWbD3d", vence:"2026-09-30"},
   {codigo:"COMPRAML", desconto:"22% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/16AHHdk", vence:"2026-09-30"},
   {codigo:"CUPONZINHO", desconto:"22% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1MJqxoV", vence:"2026-09-30"},
   {codigo:"MELIBAIXOU", desconto:"25% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1ww65tH", vence:"2026-10-07"},
-  {codigo:"SAMSUNG15OFF", desconto:"15% OFF", regra:"Compras acima de <b>R$ 700</b> · desconto máximo de <b>R$ 111</b>", cat:"eletro", link:"https://meli.la/2ddGpif"},
   {codigo:"COLCHAO10", desconto:"10% OFF", regra:"Compras acima de <b>R$ 199</b> · desconto máximo de <b>R$ 150</b>", cat:"casa", link:"https://meli.la/18tejiU"},
   {codigo:"DESCONTOJUSTO", desconto:"22% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1buHBCh", vence:"2026-10-14"},
   {codigo:"PROMONOMELI", desconto:"18% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1fet6vZ", vence:"2026-09-27"},
   {codigo:"LEVOUBARATO", desconto:"10% OFF", regra:"Compras acima de <b>R$ 99</b> · desconto máximo de <b>R$ 300</b> · Magalu", cat:"geral", link:"https://meli.la/1A6Qaw7", vence:"2026-09-20"},
+  {codigo:"PAGUEMENOSJA", desconto:"18% OFF", regra:"Compras acima de <b>R$ 49</b> · desconto máximo de <b>R$ 50</b>", cat:"geral", link:"https://meli.la/2t5vViE", vence:"2026-09-20"},
   {codigo:"MLDEBOA", desconto:"20% OFF", regra:"Compras acima de <b>R$ 79</b> · desconto máximo de <b>R$ 60</b> · Acessórios para Veículos", cat:"geral", link:"https://meli.la/2tgFhoE", vence:"2026-09-20"},
   {codigo:"PRECINHOAMIGO", desconto:"10% OFF", regra:"Compras acima de <b>R$ 99</b> · desconto máximo de <b>R$ 300</b> · KaBuM", cat:"geral", link:"https://meli.la/21kMm2N", vence:"2026-09-20"},
   {codigo:"SUPERPROMO20", desconto:"20% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/2Ehh1w9"},
-  {codigo:"MOCHILA20OFF", desconto:"20% OFF", regra:"Compras acima de <b>R$ 79,99</b> · desconto máximo de <b>R$ 30</b> · Mochilas infantis", cat:"geral", link:"https://meli.la/2fW6awG"},
 
 /* MARCAS — sempre por último */
   {codigo:"COSCO15", desconto:"15% OFF", regra:"Compras acima de <b>R$ 450</b> · desconto máximo de <b>R$ 100</b>", cat:"marcas", link:"https://meli.la/2wGeQ71"},
   {codigo:"CELUCB", desconto:"10% OFF", regra:"Compras acima de <b>R$ 700</b> · desconto máximo de <b>R$ 500</b>", cat:"marcas", link:"https://meli.la/1pqkRLt", vence:"2026-12-31"},
-  {codigo:"CALVIN20OFF", desconto:"20% OFF", regra:"Compras acima de <b>R$ 79,99</b> · desconto máximo de <b>R$ 30</b> · Marca Calvin Klein", cat:"marcas", link:"https://lista.mercadolivre.com.br/_Container_liquida-calvin-1p"},
 ];
 
 const CATEGORIAS = {
