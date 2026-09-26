@@ -659,10 +659,10 @@
    ============================================================ */
 // DATA_VERIF agora é automática — definida logo após HOJE, sempre com a data vigente no Brasil.
 const CUPONS = [
-  {codigo:"BATEUAQUI", desconto:"20% OFF", regra:"Compras acima de <b>R$ 79</b> · desconto máximo de <b>R$ 60</b>", cat:"geral", link:"https://meli.la/1GqtftY", vence:"2026-09-27"},
-  {codigo:"MELIACHAPROMOS", desconto:"20% OFF", regra:"Compras acima de <b>R$ 19</b> · desconto máximo de <b>R$ 100</b>", cat:"geral", link:"https://meli.la/31u9zGp", vence:"2026-09-27"},
+  {codigo:"BATEUAQUI", desconto:"20% OFF", regra:"Compras acima de <b>R$ 79</b> · desconto máximo de <b>R$ 60</b>", cat:"geral", link:"https://meli.la/1GqtftY", vence:"2026-09-27", destaque:true},
+  {codigo:"MELIACHAPROMOS", desconto:"20% OFF", regra:"Compras acima de <b>R$ 19</b> · desconto máximo de <b>R$ 100</b>", cat:"geral", link:"https://meli.la/31u9zGp", vence:"2026-09-27", destaque:true},
   {codigo:"BATEUPRONTOCUPOM", desconto:"30% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/2mxmk39", vence:"2026-10-05"},
-  {codigo:"TEMAQUI", desconto:"18% OFF", regra:"Compras acima de <b>R$ 79</b> · desconto máximo de <b>R$ 60</b>", cat:"casa", link:"https://meli.la/2gJYBmM", vence:"2026-09-27"},
+  {codigo:"TEMAQUI", desconto:"18% OFF", regra:"Compras acima de <b>R$ 79</b> · desconto máximo de <b>R$ 60</b>", cat:"casa", link:"https://meli.la/2gJYBmM", vence:"2026-09-27", destaque:true},
   {codigo:"AMODESCONTO", desconto:"15% OFF", regra:"Compras acima de <b>R$ 50</b> · desconto máximo de <b>R$ 200</b>", cat:"eletro", link:"https://meli.la/2AM4kte", vence:"2026-09-27"},
   {codigo:"BATEDESCONTO", desconto:"30% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1pTcTya", vence:"2026-10-11"},
   {codigo:"INTERNACIONALMELI", desconto:"15% OFF", regra:"Compras acima de <b>R$ 39</b> · desconto máximo de <b>R$ 40</b>", cat:"geral", link:"https://meli.la/1yRdxNe"},
@@ -715,15 +715,15 @@ const CUPONS = [
   {codigo:"PECHINCHA", desconto:"30% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/2x32ApM", vence:"2026-10-31"},
   {codigo:"QUEROJA", desconto:"22% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/11ceE2n", vence:"2026-10-31"},
   {codigo:"CHEGOUCUPOM", desconto:"25% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/2XTcPiD", vence:"2026-10-31"},
-  {codigo:"BARRATINHOJA", desconto:"30% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1nktCQk", vence:"2026-10-25"},
-  {codigo:"DESCONTOESPECIAL", desconto:"25% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1iQ7k8H", vence:"2026-10-25"},
+  {codigo:"BARRATINHOJA", desconto:"30% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1nktCQk", vence:"2026-10-25", novo:"2026-09-25"},
+  {codigo:"DESCONTOESPECIAL", desconto:"25% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1iQ7k8H", vence:"2026-10-25", novo:"2026-09-25"},
   {codigo:"MAISCUPONS", desconto:"25% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/2DtE8ty"},
   {codigo:"TACOMVC", desconto:"30% OFF", regra:"Compras acima de <b>R$ 99</b> · desconto máximo de <b>R$ 300</b>", cat:"geral", link:"https://meli.la/11b82tE", vence:"2026-09-29"},
   {codigo:"COMPRAML", desconto:"22% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/16AHHdk", vence:"2026-09-30"},
   {codigo:"MELICOMPRAAI", desconto:"22% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/2TjSvjL", vence:"2026-10-31"},
   {codigo:"GARIMPEI", desconto:"30% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/2vbUwQm", vence:"2026-10-31"},
   {codigo:"SALVEIESSA", desconto:"25% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/23vciZN", vence:"2026-09-30"},
-  {codigo:"CUSTOUPOUQUINHO", desconto:"22% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1hSP2wN", vence:"2026-10-25"},
+  {codigo:"CUSTOUPOUQUINHO", desconto:"22% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1hSP2wN", vence:"2026-10-25", novo:"2026-09-25"},
   {codigo:"MELIDESCONTEI", desconto:"30% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1htzU62", vence:"2026-10-31"},
   {codigo:"PEGUEIJA", desconto:"22% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/2ergnJj", vence:"2026-10-31"},
   {codigo:"LEVEAGORA", desconto:"25% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1ipkAAq", vence:"2026-10-31"},
@@ -733,7 +733,7 @@ const CUPONS = [
   {codigo:"CARRINHOCHEIOJA", desconto:"30% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1zH5wDg", vence:"2026-10-14"},
   {codigo:"HORADOCUPOM", desconto:"18% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/2GvbzrR", vence:"2026-10-31"},
   {codigo:"MELHORCUPOMML", desconto:"25% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/2iU6RkQ", vence:"2026-10-31"},
-  {codigo:"PRECINHO", desconto:"30% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/2YFWHCB", vence:"2026-10-31"},
+  {codigo:"PRECINHO", desconto:"30% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/2YFWHCB", vence:"2026-10-31", novo:"2026-09-25"},
   {codigo:"AGORAVAI", desconto:"25% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1RWbD3d", vence:"2026-09-30"},
   {codigo:"SHOWDEPROMO", desconto:"20% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1T8AYAs", vence:"2026-10-31"},
   {codigo:"OPAECONOMIZEI", desconto:"30% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/13hAFg9", vence:"2026-10-05"},
@@ -760,7 +760,7 @@ const CUPONS = [
   {codigo:"EPIDRAT15", desconto:"15% OFF", regra:"Compras acima de <b>R$ 5</b> · desconto máximo de <b>R$ 145</b>", cat:"beleza", link:"https://meli.la/16yw1tZ"},
 
 /* MARCAS — sempre por último */
-  {codigo:"SECULUS15", desconto:"30% OFF", regra:"Compras acima de <b>R$ 99</b> · desconto máximo de <b>R$ 100</b> · relógios Seculus e Mondaine", cat:"marcas", link:"https://meli.la/1NvUfBW"},
+  {codigo:"SECULUS15", desconto:"30% OFF", regra:"Compras acima de <b>R$ 99</b> · desconto máximo de <b>R$ 100</b> · relógios Seculus e Mondaine", cat:"marcas", link:"https://meli.la/1NvUfBW", novo:"2026-09-26"},
   {codigo:"COSCO15", desconto:"15% OFF", regra:"Compras acima de <b>R$ 450</b> · desconto máximo de <b>R$ 100</b>", cat:"marcas", link:"https://meli.la/2wGeQ71"},
   {codigo:"FORTUNAPROMOCAO", desconto:"13% OFF", regra:"Compras acima de <b>R$ 30</b> · desconto máximo de <b>R$ 100</b> · loja Cacife Brand (óculos)", cat:"marcas", link:"https://meli.la/2AzK58b"},
   {codigo:"CELUCB", desconto:"10% OFF", regra:"Compras acima de <b>R$ 700</b> · desconto máximo de <b>R$ 400</b>", cat:"marcas", link:"https://meli.la/1pqkRLt", vence:"2026-12-31"},
@@ -783,6 +783,8 @@ const vazioEl = document.getElementById('vazio');
 const contagemEl = document.getElementById('contagem');
 // Data de hoje no fuso do Brasil (AAAA-MM-DD). Cupons vencidos somem sozinhos à meia-noite.
 const HOJE = new Intl.DateTimeFormat('en-CA',{timeZone:'America/Sao_Paulo'}).format(new Date());
+// NOVO: cupom mostra a etiqueta no dia em que entrou e no dia seguinte (campo novo:"AAAA-MM-DD").
+const NOVO_DESDE = new Intl.DateTimeFormat('en-CA',{timeZone:'America/Sao_Paulo'}).format(new Date(Date.now()-86400000));
 const DATA_VERIF = HOJE.slice(8,10) + '/' + HOJE.slice(5,7);
 const ATIVOS = CUPONS.filter(c => !c.vence || c.vence >= HOJE);
 document.getElementById('pilula-total').textContent = `🎟️ ${ATIVOS.length} cupons ativos · atualizado ${DATA_VERIF}`;
@@ -841,7 +843,7 @@ function criarCard(c){
       <div class="barra b-${c.cat}"><span class="selo-verif">✓ Verificado ${DATA_VERIF}</span><span class="luzes">○ ─ ✕</span></div>
       <div class="conteudo">
         <div style="display:flex;justify-content:space-between;align-items:center;gap:8px">
-          <span class="desconto">${c.desconto}</span>${c.novo ? '<span class="tag-novo">NOVO</span>' : ''}
+          <span class="desconto">${c.desconto}</span>${(c.novo && c.novo >= NOVO_DESDE) ? '<span class="tag-novo">NOVO</span>' : ''}
           ${CATEGORIAS[c.cat] ? '<span style="font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#6b6880">' + CATEGORIAS[c.cat].replace(/^\S+\s/,'') + '</span>' : ''}
         </div>
         <div class="codigo-wrap">
