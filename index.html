@@ -659,8 +659,6 @@
    ============================================================ */
 // DATA_VERIF agora é automática — definida logo após HOJE, sempre com a data vigente no Brasil.
 const CUPONS = [
-  {codigo:"BATEUAQUI", desconto:"20% OFF", regra:"Compras acima de <b>R$ 79</b> · desconto máximo de <b>R$ 60</b>", cat:"geral", link:"https://meli.la/1GqtftY", vence:"2026-09-27", destaque:true},
-  {codigo:"LIVROS20", desconto:"20% OFF", regra:"Livros & Jogos · desconto máximo de <b>R$ 30</b>", cat:"geral", link:"https://meli.la/19GzGqy", novo:"2026-09-26", destaque:true},
   {codigo:"BATEUPRONTOCUPOM", desconto:"30% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/2mxmk39", vence:"2026-10-05"},
   {codigo:"MELIACHAPROMOS", desconto:"20% OFF", regra:"Compras acima de <b>R$ 19</b> · desconto máximo de <b>R$ 100</b>", cat:"geral", link:"https://meli.la/31u9zGp", vence:"2026-09-27", destaque:true},
   {codigo:"TEMAQUI", desconto:"18% OFF", regra:"Compras acima de <b>R$ 79</b> · desconto máximo de <b>R$ 60</b>", cat:"casa", link:"https://meli.la/2gJYBmM", vence:"2026-09-27"},
@@ -669,16 +667,12 @@ const CUPONS = [
   {codigo:"INTERNACIONALMELI", desconto:"15% OFF", regra:"Compras acima de <b>R$ 39</b> · desconto máximo de <b>R$ 40</b>", cat:"geral", link:"https://meli.la/1yRdxNe"},
   {codigo:"DESCONTEI", desconto:"30% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/2KHrCcR", vence:"2026-10-31"},
   {codigo:"MELIKIDS", desconto:"15% OFF", regra:"Compras acima de <b>R$ 59</b> · desconto máximo de <b>R$ 50</b>", cat:"geral", link:"https://meli.la/2VL8vZd", vence:"2026-09-27", novo:"2026-09-26"},
-  {codigo:"APROVEITAHOJE", desconto:"10% OFF", regra:"Compras acima de <b>R$ 149</b> · desconto máximo de <b>R$ 200</b>", cat:"eletro", link:"https://meli.la/27J1T5H", novo:"2026-09-26"},
   {codigo:"GARANTINOTOP", desconto:"30% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1JSiTQT", vence:"2026-10-04"},
-  {codigo:"LOJASOFICIAIS2609", desconto:"10% OFF", regra:"Compras acima de <b>R$ 30</b> · Lojas Oficiais", cat:"geral", link:"https://meli.la/1U57JBo", novo:"2026-09-26"},
-  {codigo:"MODA10", desconto:"10% OFF", regra:"Moda & Bem-Estar · desconto máximo de <b>R$ 20</b>", cat:"geral", link:"https://meli.la/1U57JBo", novo:"2026-09-26"},
   {codigo:"ECONOMIZEI", desconto:"30% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/2A8Ejdy", vence:"2026-10-31"},
   {codigo:"VIPNOMELI", desconto:"10% OFF", regra:"Compras acima de <b>R$ 99</b> · desconto máximo de <b>R$ 300</b>", cat:"eletro", link:"https://meli.la/2GocxZw", vence:"2026-09-27"},
   {codigo:"CORREAQUI", desconto:"8% OFF", regra:"Compras acima de <b>R$ 150</b> · desconto máximo de <b>R$ 300</b>", cat:"eletro", link:"https://meli.la/1isSMYs", vence:"2026-09-27"},
   {codigo:"OFERTASMELI", desconto:"30% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1FWPfL1", vence:"2026-10-08"},
   {codigo:"OFERTAJA", desconto:"R$ 100 OFF", regra:"Compras acima de <b>R$ 1.099</b>", cat:"casa", link:"https://meli.la/15UbD7z", vence:"2026-09-27"},
-  {codigo:"CASA20", desconto:"20% OFF", regra:"Itens de Casa · desconto máximo de <b>R$ 85</b>", cat:"casa", link:"https://meli.la/1iM1YmN", novo:"2026-09-26"},
   {codigo:"ECONOMIALOCAL", desconto:"30% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1VZ8JJ2", vence:"2026-10-04"},
   {codigo:"MELHORCUPOM", desconto:"15% OFF", regra:"Compras acima de <b>R$ 49</b> · desconto máximo de <b>R$ 50</b>", cat:"geral", link:"https://meli.la/2Gjn6qy", vence:"2026-09-27"},
   {codigo:"ACHADINHO", desconto:"10% OFF", regra:"Compras acima de <b>R$ 99</b> · desconto máximo de <b>R$ 300</b>", cat:"eletro", link:"https://meli.la/13aqtV4", vence:"2026-09-27"},
@@ -763,7 +757,6 @@ const CUPONS = [
   {codigo:"MELIGOODMOOD", desconto:"15% OFF", regra:"Compras acima de <b>R$ 39</b> · desconto máximo de <b>R$ 40</b>", cat:"geral", link:"https://meli.la/1ezdnnH", vence:"2026-10-31"},
   {codigo:"EPISOL15", desconto:"15% OFF", regra:"Compras acima de <b>R$ 5</b> · desconto máximo de <b>R$ 145</b>", cat:"beleza", link:"https://meli.la/1HrgDiv"},
   {codigo:"COLCHAO10", desconto:"10% OFF", regra:"Compras acima de <b>R$ 199</b> · desconto máximo de <b>R$ 150</b>", cat:"casa", link:"https://meli.la/18tejiU", vence:"2026-09-30"},
-  {codigo:"EPIDRAT15", desconto:"15% OFF", regra:"Compras acima de <b>R$ 5</b> · desconto máximo de <b>R$ 145</b>", cat:"beleza", link:"https://meli.la/16yw1tZ"},
 
 /* MARCAS — sempre por último */
   {codigo:"BELEZA10D010", desconto:"20% OFF", regra:"Compras acima de <b>R$ 10</b> · desconto máximo de <b>R$ 30</b> · Principia", cat:"marcas", link:"https://meli.la/29yLMfM", novo:"2026-09-26"},
