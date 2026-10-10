@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Entre no grupo de promoções da Rainha e pare de pagar caro. Promoção, cupom e queda de preço, tudo conferido antes de chegar no seu WhatsApp.">
+<meta property="og:title" content="Grupo da Rainha das Promoções">
+<meta property="og:description" content="Promoções, cupons e quedas de preço conferidas todo dia, direto no seu WhatsApp. Grátis.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#120C18">
+<title>Grupo da Rainha das Promoções</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<style>
+/* Página de captura escura e premium: fita de urgência, herói com um só botão, âncora de valor em tempo, quebra de objeção, CTA fixo no celular. */
+:root{
+  --fundo:#120C18; --alto:#1B1324; --carta:#1F1729; --linha:#342943;
+  --tinta:#F6F1FA; --fraco:#A294B2; --ouro:#E8B84B; --ouro-fraco:#2C2214;
+  --zap:#25D366; --zap-tinta:#08190E; --zap-escuro:#1CB859;
+  --sombra:0 2px 4px rgba(0,0,0,.3), 0 16px 44px rgba(0,0,0,.45);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--fundo);color:var(--tinta);
+  font-family:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;
+}
+.env{max-width:600px;margin:0 auto;padding-inline:20px}
+
+/* ---- fita de urgência ---- */
+.fita{
+  background:var(--ouro-fraco);border-bottom:1px solid var(--linha);
+  text-align:center;padding-block:9px;
+  font-size:12.5px;font-weight:700;letter-spacing:.04em;color:var(--ouro);
+}
+.ponto{
+  display:inline-block;width:7px;height:7px;border-radius:50%;
+  background:var(--zap);margin-right:7px;vertical-align:1px;
+  animation:pulsa 2s ease-in-out infinite;
+}
+@keyframes pulsa{0%,100%{opacity:1}50%{opacity:.35}}
+
+/* ---- herói ---- */
+.heroi{position:relative;text-align:center;padding-block:38px 0;overflow:hidden}
+.heroi::before{
+  content:"";position:absolute;inset:-120px 50% auto;transform:translateX(50%);
+  width:620px;max-width:140vw;height:420px;border-radius:50%;
+  background:radial-gradient(circle, color-mix(in srgb,var(--ouro) 16%,transparent) 0%, transparent 68%);
+  pointer-events:none;
+}
+.heroi > *{position:relative}
+.coroa{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--ouro);border:1px solid color-mix(in srgb,var(--ouro) 32%,transparent);
+  background:var(--ouro-fraco);border-radius:999px;padding:6px 14px;
+}
+.coroa svg{width:14px;height:14px;flex:none}
+
+h1{
+  font-family:'Archivo Black','Arial Black',system-ui,sans-serif;font-weight:400;
+  font-size:clamp(30px,8.4vw,46px);line-height:1.02;letter-spacing:-.025em;
+  margin:20px 0 0;text-wrap:balance;
+}
+h1 .ouro{color:var(--ouro)}
+.promessa{color:var(--fraco);font-size:17px;margin:15px auto 0;max-width:36ch;text-wrap:balance}
+
+/* ---- botão ---- */
+.acao{display:flex;flex-direction:column;align-items:center;gap:11px;margin-top:26px}
+.zap{
+  display:inline-flex;align-items:center;justify-content:center;gap:11px;
+  width:100%;max-width:420px;
+  background:var(--zap);color:var(--zap-tinta);text-decoration:none;
+  font-family:'Plus Jakarta Sans',sans-serif;font-size:17.5px;font-weight:800;
+  letter-spacing:-.01em;border:none;border-radius:15px;padding:18px 22px;cursor:pointer;
+  box-shadow:0 8px 26px color-mix(in srgb,var(--zap) 32%,transparent);
+  transition:transform .14s, box-shadow .14s, background .14s;
+}
+.zap:hover{background:#2FE072;transform:translateY(-2px);box-shadow:0 12px 32px color-mix(in srgb,var(--zap) 45%,transparent)}
+.zap:active{transform:translateY(0)}
+.zap svg{width:22px;height:22px;flex:none}
+.zap[aria-disabled="true"]{opacity:.75;cursor:default}
+.zap[aria-disabled="true"]:hover{background:var(--zap);transform:none}
+.semlink{font-size:12.5px;color:var(--ouro);margin:0}
+.selos{
+  display:flex;gap:7px;flex-wrap:wrap;justify-content:center;
+  font-size:12.5px;color:var(--fraco);margin:0;
+}
+.selos span{display:inline-flex;align-items:center;gap:5px}
+.selos svg{width:13px;height:13px;color:var(--zap);flex:none}
+
+/* ---- números ---- */
+.numeros{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+  background:var(--linha);border:1px solid var(--linha);border-radius:14px;
+  overflow:hidden;margin-top:30px;
+}
+.num{background:var(--alto);padding:16px 8px;text-align:center}
+.num b{
+  display:block;font-family:'Archivo Black',Arial,sans-serif;font-weight:400;
+  font-size:clamp(18px,5vw,24px);color:var(--ouro);letter-spacing:-.02em;
+  font-variant-numeric:tabular-nums;
+}
+.num span{display:block;font-size:11.5px;color:var(--fraco);margin-top:3px;line-height:1.3}
+
+/* ---- seções ---- */
+section{padding-block:38px 0}
+h2{
+  font-family:'Archivo Black',Arial,sans-serif;font-weight:400;
+  font-size:clamp(22px,5.6vw,27px);line-height:1.12;letter-spacing:-.02em;
+  margin:0 0 6px;text-wrap:balance;
+}
+.leve{color:var(--fraco);font-size:14.5px;margin:0 0 18px}
+
+.lista{display:flex;flex-direction:column;gap:11px;margin:0;padding:0;list-style:none}
+.item{
+  display:flex;gap:14px;align-items:flex-start;
+  background:var(--carta);border:1px solid var(--linha);border-radius:14px;
+  padding:16px 17px;box-shadow:var(--sombra);
+}
+.bolha{
+  flex:none;width:34px;height:34px;border-radius:10px;
+  background:var(--ouro-fraco);color:var(--ouro);display:grid;place-items:center;
+}
+.bolha svg{width:18px;height:18px}
+.item .txt{min-width:0}
+.item strong{display:block;font-size:15.5px;font-weight:800;letter-spacing:-.01em}
+.item span{display:block;font-size:14px;color:var(--fraco);margin-top:3px}
+
+/* ---- âncora de valor ---- */
+.ancora{
+  background:var(--alto);border:1px solid var(--linha);border-radius:18px;
+  padding:22px 20px;box-shadow:var(--sombra);
+}
+.ancora h2{font-size:21px;margin-bottom:14px}
+.conta{display:flex;flex-direction:column;gap:0;margin:0 0 4px;padding:0;list-style:none}
+.conta li{
+  display:flex;justify-content:space-between;align-items:baseline;gap:14px;
+  padding-block:11px;border-bottom:1px dashed var(--linha);font-size:14.5px;
+}
+.conta li span:last-child{flex:none;color:var(--ouro);font-weight:700;font-variant-numeric:tabular-nums}
+.total{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding-top:15px;margin-top:4px}
+.total .rot{font-size:15px;font-weight:700}
+.total .val{
+  font-family:'Archivo Black',Arial,sans-serif;font-weight:400;font-size:26px;
+  color:var(--zap);letter-spacing:-.02em;
+}
+.riscado{display:block;font-size:13px;color:var(--fraco);text-decoration:line-through;font-weight:500}
+
+/* ---- objeção ---- */
+.calma{
+  background:linear-gradient(180deg, color-mix(in srgb,var(--zap) 9%,var(--carta)), var(--carta));
+  border:1px solid color-mix(in srgb,var(--zap) 26%,var(--linha));
+  border-radius:18px;padding:22px 20px;
+}
+.calma h2{margin-bottom:14px}
+.regras{display:flex;flex-direction:column;gap:11px;margin:0;padding:0;list-style:none}
+.regras li{display:flex;gap:11px;align-items:flex-start;font-size:14.5px}
+.regras svg{width:18px;height:18px;flex:none;margin-top:3px;color:var(--zap)}
+
+/* ---- lojas ---- */
+.lojas{display:flex;flex-wrap:wrap;gap:7px;justify-content:center}
+.loja{
+  font-size:12.5px;font-weight:700;color:var(--fraco);
+  background:var(--carta);border:1px solid var(--linha);
+  border-radius:999px;padding:6px 13px;
+}
+
+/* ---- fecho ---- */
+.fecho{text-align:center}
+.fecho h2{font-size:clamp(24px,6.6vw,32px)}
+.aviso{font-size:13.5px;color:var(--fraco);margin:11px auto 0;max-width:40ch;text-wrap:balance}
+
+footer{
+  margin-top:44px;border-top:1px solid var(--linha);
+  padding-block:22px 30px;text-align:center;
+  font-size:12.5px;color:var(--fraco);line-height:1.7;
+}
+footer a{color:var(--ouro);text-decoration:none;font-weight:700}
+footer a:hover{text-decoration:underline}
+
+/* ---- aviso flutuante de achado ---- */
+.toast{
+  position:fixed;left:16px;bottom:16px;z-index:50;max-width:min(330px,calc(100vw - 32px));
+  display:flex;gap:11px;align-items:center;
+  background:var(--carta);border:1px solid var(--linha);border-radius:14px;
+  padding:11px 14px 11px 12px;box-shadow:var(--sombra);
+  opacity:0;transform:translateY(14px);transition:opacity .35s, transform .35s;
+  pointer-events:none;
+}
+.toast.ver{opacity:1;transform:translateY(0)}
+.toast .tag{
+  flex:none;width:34px;height:34px;border-radius:10px;
+  background:var(--ouro-fraco);color:var(--ouro);display:grid;place-items:center;
+}
+.toast .tag svg{width:17px;height:17px}
+.toast .tt{min-width:0}
+.toast .tt b{display:block;font-size:13.5px;font-weight:700;letter-spacing:-.01em;line-height:1.3}
+.toast .tt i{display:block;font-style:normal;font-size:11.5px;color:var(--fraco);margin-top:2px}
+@media (max-width:640px){ .toast{bottom:calc(84px + env(safe-area-inset-bottom,0px))} }
+
+/* ---- barra fixa no celular ---- */
+.barra{
+  position:fixed;left:0;right:0;bottom:0;z-index:40;display:none;
+  background:color-mix(in srgb,var(--fundo) 94%,transparent);
+  backdrop-filter:blur(10px);border-top:1px solid var(--linha);
+  padding:11px 16px calc(11px + env(safe-area-inset-bottom,0px));
+}
+.barra .zap{max-width:none;padding:15px 20px;font-size:16.5px}
+@media (max-width:640px){
+  .barra{display:block}
+  body{padding-bottom:96px}
+}
+
+a:focus-visible,button:focus-visible{outline:2px solid var(--ouro);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="fita"><span class="ponto"></span><span id="fitaTxt">Vagas abertas no grupo de hoje</span></div>
+
+<div class="env">
+
+  <header class="heroi">
+    <span class="coroa">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 18h18l1.2-10.2-5.1 3.6L12 3.6 6.9 11.4 1.8 7.8 3 18zm0 2v1.2h18V20H3z"/></svg>
+      A Rainha das Promoções
+    </span>
+
+    <h1>Pare de descobrir <span class="ouro">depois</span> que dava pra pagar menos</h1>
+
+    <p class="promessa">Todo dia eu garimpo as promoções, testo os cupons e mando só o que vale a pena.</p>
+
+    <div class="acao">
+      <a class="zap" id="btn" href="#" role="button">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.5.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+        <span>Entrar no grupo grátis</span>
+      </a>
+      <p class="semlink" id="semlink" hidden>Falta colar o link do grupo</p>
+      <p class="selos">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Grátis</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Sai quando quiser</span>
+      </p>
+    </div>
+
+    <div class="numeros">
+      <div class="num"><b>+40 mil</b><span>pessoas nos grupos</span></div>
+      <div class="num"><b>Todo dia</b><span>promoção nova</span></div>
+      <div class="num"><b>Conferido</b><span>antes de postar</span></div>
+    </div>
+  </header>
+
+  <section>
+    <h2>O que chega no seu WhatsApp</h2>
+    <p class="leve">Promoção, cupom e queda de preço. Tudo conferido antes.</p>
+    <ul class="lista">
+
+      <li class="item">
+        <span class="bolha"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span>
+        <span class="txt"><strong>As promoções do dia, garimpadas a mão</strong>
+        <span>Eu caço loja por loja atrás do que baixou de preço. Promoção boa não precisa de cupom pra ser boa.</span></span>
+      </li>
+
+      <li class="item">
+        <span class="bolha"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+        <span class="txt"><strong>Cupom testado no carrinho</strong>
+        <span>Quando a oferta tem cupom, eu coloco no carrinho e vejo se desconta mesmo. Cupom vencido não entra no grupo.</span></span>
+      </li>
+
+      <li class="item">
+        <span class="bolha"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 7-7"/><path d="M14 8h6v6"/></svg></span>
+        <span class="txt"><strong>O desconto que é de verdade</strong>
+        <span>Tem loja que sobe o preço na véspera pra dar desconto no dia. Eu acompanho o histórico e só aviso quando a queda é real.</span></span>
+      </li>
+
+      <li class="item">
+        <span class="bolha"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg></span>
+        <span class="txt"><strong>Aviso enquanto ainda dá tempo</strong>
+        <span>Oferta relâmpago dura pouco. Você fica sabendo na hora, não quando já acabou.</span></span>
+      </li>
+
+    </ul>
+  </section>
+
+  <section>
+    <div class="ancora">
+      <h2>O que isso te pouparia por semana</h2>
+      <ul class="conta">
+        <li><span>Procurar o produto em 4 ou 5 lojas</span><span>2h</span></li>
+        <li><span>Descobrir se tem cupom e testar</span><span>40min</span></li>
+        <li><span>Conferir se o preço caiu mesmo ou subiu antes</span><span>1h</span></li>
+        <li><span>Correr atrás da oferta que já tinha acabado</span><span>30min</span></li>
+      </ul>
+      <div class="total">
+        <span class="rot">Eu faço isso por você<span class="riscado">mais de 4h por semana</span></span>
+        <span class="val">R$ 0</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="calma">
+      <h2>Seu WhatsApp não vira bagunça</h2>
+      <ul class="regras">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Lojas 100% confiáveis, que você já conhece.</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Sem corrente, sem bom dia, sem conversa paralela.</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Dá pra silenciar e abrir só na hora que quiser comprar.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Onde eu garimpo</h2>
+    <p class="leve">As lojas que mais aparecem no grupo.</p>
+    <div class="lojas">
+      <span class="loja">Mercado Livre</span><span class="loja">Amazon</span><span class="loja">Shopee</span>
+      <span class="loja">Magalu</span><span class="loja">Natura</span><span class="loja">Boticário</span>
+      <span class="loja">Renner</span><span class="loja">Riachuelo</span><span class="loja">Netshoes</span>
+      <span class="loja">Adidas</span><span class="loja">Dafiti</span><span class="loja">Centauro</span>
+    </div>
+  </section>
+
+  <section class="fecho">
+    <h2>Entra e testa uma semana</h2>
+    <p class="aviso">Se não valer a pena, você sai com um toque. Mas quem entra costuma ficar.</p>
+    <div class="acao">
+      <a class="zap" id="btn2" href="#" role="button">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.5.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+        <span>Quero entrar no grupo</span>
+      </a>
+      <p class="selos"><span>Quando um grupo lota, eu abro outro. Você entra no que estiver aberto.</span></p>
+    </div>
+  </section>
+
+  <footer>
+    Feito por <a href="https://instagram.com/arainhadaspromocoes" target="_blank" rel="noopener">A Rainha das Promoções</a>
+  </footer>
+
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <span class="tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20c.6-3.8 3.8-6 7.5-6s6.9 2.2 7.5 6"/></svg></span>
+  <span class="tt"><b id="toastTit"></b><i id="toastSub"></i></span>
+</div>
+
+<div class="barra">
+  <a class="zap" id="btn3" href="#" role="button">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.5.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+    <span>Entrar no grupo grátis</span>
+  </a>
+</div>
+
+<script>
+/* ============================================================
+   1) LINK DO GRUPO — cole entre as aspas
+   ============================================================ */
+const LINK_GRUPO = "https://chat.whatsapp.com/GWX3Jfajd0XF5EWZ5fxPEx";
+
+(function(){
+  var ids = ["btn","btn2","btn3"], i, b;
+  for (i = 0; i < ids.length; i++){
+    b = document.getElementById(ids[i]);
+    if (!b) continue;
+    if (LINK_GRUPO){
+      b.href = LINK_GRUPO; b.target = "_blank"; b.rel = "noopener";
+    } else {
+      b.removeAttribute("href");
+      b.setAttribute("aria-disabled","true");
+    }
+  }
+  if (!LINK_GRUPO) document.getElementById("semlink").hidden = false;
+})();
+
+/* ============================================================
+   2) CATRACA — conta de verdade quem clica pra entrar
+   Grava no Firebase da Rainha (visitas/grupo_entradas) e avisa
+   no cantinho só quando o número sobe mesmo.
+   ============================================================ */
+(function(){
+  var PROJ = "lives-da-rainha",
+      KEY  = "AIzaSyA6qO04sAW0nPFKg_z40CRXGAC0x4E70dE",
+      RAIZ = "projects/" + PROJ + "/databases/(default)/documents",
+      DOC  = RAIZ + "/visitas/grupo_entradas",
+      COMMIT = "https://firestore.googleapis.com/v1/" + RAIZ + ":commit?key=" + KEY,
+      LER = "https://firestore.googleapis.com/v1/" + DOC + "?key=" + KEY;
+
+  var cx  = document.getElementById("toast"),
+      tit = document.getElementById("toastTit"),
+      sub = document.getElementById("toastSub"),
+      fita = document.getElementById("fitaTxt");
+
+  function dia(){
+    var d = new Date(), m = d.getMonth()+1, x = d.getDate();
+    return "d_" + d.getFullYear() + (m<10?"0":"") + m + (x<10?"0":"") + x;
+  }
+
+  /* uma pessoa, um clique, uma contagem */
+  function registra(){
+    try{
+      if (sessionStorage.getItem("rainha_grupo_clicou")) return;
+      sessionStorage.setItem("rainha_grupo_clicou", "1");
+    }catch(e){}
+    try{
+      fetch(COMMIT, {
+        method:"POST",
+        headers:{"Content-Type":"application/json"},
+        body: JSON.stringify({ writes:[{
+          update:{ name: DOC, fields:{} },
+          updateMask:{ fieldPaths:["marcador"] },
+          updateTransforms:[
+            { fieldPath:"total", increment:{ integerValue:"1" } },
+            { fieldPath:dia(),   increment:{ integerValue:"1" } },
+            { fieldPath:"ultima", setToServerValue:"REQUEST_TIME" }
+          ]
+        }]}),
+        keepalive:true
+      }).catch(function(){});
+    }catch(e){}
+  }
+  ["btn","btn2","btn3"].forEach(function(id){
+    var b = document.getElementById(id);
+    if (b) b.addEventListener("click", registra);
+  });
+
+  /* mostra o aviso */
+  var sumindo = null;
+  function aviso(titulo, legenda){
+    tit.textContent = titulo; sub.textContent = legenda;
+    cx.classList.add("ver");
+    clearTimeout(sumindo);
+    sumindo = setTimeout(function(){ cx.classList.remove("ver"); }, 5000);
+  }
+
+  /* lê o número de verdade a cada 20s */
+  var ultimo = null;
+  function lerHoje(){
+    fetch(LER).then(function(r){ return r.ok ? r.json() : null; }).then(function(j){
+      var n = 0;
+      if (j && j.fields && j.fields[dia()]) n = parseInt(j.fields[dia()].integerValue, 10) || 0;
+
+      if (n > 0) fita.textContent = (n === 1)
+        ? "1 pessoa entrou no grupo hoje"
+        : n + " pessoas entraram no grupo hoje";
+
+      if (ultimo !== null && n > ultimo){
+        var q = n - ultimo;
+        aviso(q === 1 ? "Alguém acabou de entrar no grupo" : q + " pessoas acabaram de entrar no grupo",
+              "agora mesmo");
+      }
+      ultimo = n;
+    }).catch(function(){});
+  }
+  lerHoje();
+  setInterval(lerHoje, 20000);
+})();
+</script>
+
+</body>
+</html>
