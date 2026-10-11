@@ -216,6 +216,23 @@ footer a:hover{text-decoration:underline}
 a:focus-visible,button:focus-visible{outline:2px solid var(--ouro);outline-offset:3px}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2228511961340665');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2228511961340665&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
 
@@ -419,9 +436,17 @@ const LINK_GRUPO = "https://chat.whatsapp.com/GWX3Jfajd0XF5EWZ5fxPEx";
       }).catch(function(){});
     }catch(e){}
   }
+  /* avisa o pixel da Meta que a pessoa clicou pra entrar (uma vez por visita) */
+  function pixelLead(){
+    try{
+      if (sessionStorage.getItem("rainha_grupo_lead")) return;
+      sessionStorage.setItem("rainha_grupo_lead", "1");
+    }catch(e){}
+    try{ if (window.fbq) fbq("track", "Lead", { content_name: "grupo_whatsapp" }); }catch(e){}
+  }
   ["btn","btn2","btn3"].forEach(function(id){
     var b = document.getElementById(id);
-    if (b) b.addEventListener("click", registra);
+    if (b) { b.addEventListener("click", registra); b.addEventListener("click", pixelLead); }
   });
 
   /* mostra o aviso */
