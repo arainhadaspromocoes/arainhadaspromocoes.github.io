@@ -31,7 +31,8 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '2228511961340665');
 fbq('track', 'PageView');
-fbq('track', 'Lead', { content_name: 'entrar_rodizio' });
+/* Lead só se a pessoa não veio da página do grupo (que já contou) */
+try{ var _t = parseInt(localStorage.getItem('rainha_lead_ts')||'0',10); if (!(Date.now() - _t < 120000)) fbq('track', 'Lead', { content_name: 'entrar_rodizio' }); }catch(e){ fbq('track', 'Lead', { content_name: 'entrar_rodizio' }); }
 </script>
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=2228511961340665&ev=PageView&noscript=1"
