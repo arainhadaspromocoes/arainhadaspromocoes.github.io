@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#07060B">
+<title>Entrando no grupo…</title>
+<style>
+  :root{color-scheme:dark}
+  html,body{height:100%;margin:0}
+  body{display:grid;place-items:center;background:#07060B;color:#FBF8FF;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;text-align:center;padding:24px}
+  .c{max-width:340px}
+  .z{width:56px;height:56px;margin:0 auto 16px;color:#25D366}
+  .z svg{width:56px;height:56px}
+  p{margin:0 0 6px;font-size:17px;font-weight:600}
+  small{display:block;color:#A79DB8;font-size:14px;margin-bottom:22px}
+  a.b{display:inline-block;padding:14px 22px;border-radius:14px;background:#25D366;color:#06200F;font-weight:700;text-decoration:none;font-size:15px}
+  .lista{display:grid;gap:10px;margin-top:10px}
+</style>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2228511961340665');
+fbq('track', 'PageView');
+fbq('track', 'Lead', { content_name: 'entrar_rodizio' });
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2228511961340665&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+</head>
+<body>
+<div class="c">
+  <div class="z"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.5.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg></div>
+  <p>Abrindo seu grupo no WhatsApp…</p>
+  <small>Se não abrir sozinho, toque no botão.</small>
+  <a class="b" id="ir" href="#">Entrar no grupo</a>
+  <noscript><div class="lista" id="semjs"></div></noscript>
+</div>
+
+<script>
+/* ============================================================
+   RODÍZIO DE GRUPOS — a recepção é a página da agência; aqui só
+   se escolhe a sala. Pra tirar um grupo lotado ou suspenso, apague
+   a linha dele. Pra abrir outro, acrescente uma linha.
+   ============================================================ */
+var SALAS = [
+  "https://chat.whatsapp.com/KtGUXQt3ca2HfGGc5ZNaHO",
+  "https://chat.whatsapp.com/FrwVlyDMv9L3s1JL7zggPn",
+  "https://chat.whatsapp.com/GovxL6mjMoN517POeQJbPI",
+  "https://chat.whatsapp.com/KfvkRjX3t7T0fOzIqLkCQo",
+  "https://chat.whatsapp.com/G64ycfCj0ak2LDpyweUUWb"
+];
+
+(function(){
+  /* quem já foi sorteado uma vez cai sempre na mesma sala */
+  var escolha = -1;
+  try{
+    var lembrada = localStorage.getItem("rainha_sala");
+    if (lembrada !== null && SALAS.indexOf(lembrada) >= 0) escolha = SALAS.indexOf(lembrada);
+  }catch(e){}
+  if (escolha < 0){
+    escolha = Math.floor(Math.random() * SALAS.length);
+    try{ localStorage.setItem("rainha_sala", SALAS[escolha]); }catch(e){}
+  }
+  var destino = SALAS[escolha];
+
+  var botao = document.getElementById("ir");
+  botao.href = destino;
+
+  /* catraca: conta no Firebase quantos foram pra cada sala (uma vez por visita) */
+  try{
+    if (!sessionStorage.getItem("rainha_entrar_contou")){
+      sessionStorage.setItem("rainha_entrar_contou", "1");
+      var PROJ = "lives-da-rainha",
+          KEY  = "AIzaSyA6qO04sAW0nPFKg_z40CRXGAC0x4E70dE",
+          RAIZ = "projects/" + PROJ + "/databases/(default)/documents",
+          DOC  = RAIZ + "/visitas/entrar_sala" + (escolha + 1),
+          d = new Date(), m = d.getMonth()+1, x = d.getDate(),
+          dia = "d_" + d.getFullYear() + (m<10?"0":"") + m + (x<10?"0":"") + x;
+      fetch("https://firestore.googleapis.com/v1/" + RAIZ + ":commit?key=" + KEY, {
+        method:"POST", headers:{"Content-Type":"application/json"}, keepalive:true,
+        body: JSON.stringify({ writes:[{
+          update:{ name: DOC, fields:{} },
+          updateMask:{ fieldPaths:["marcador"] },
+          updateTransforms:[
+            { fieldPath:"total", increment:{ integerValue:"1" } },
+            { fieldPath:dia,     increment:{ integerValue:"1" } },
+            { fieldPath:"ultima", setToServerValue:"REQUEST_TIME" }
+          ]
+        }]})
+      }).catch(function(){});
+    }
+  }catch(e){}
+
+  /* meio segundo pra catraca e pixel saírem, e vai */
+  setTimeout(function(){ location.replace(destino); }, 500);
+})();
+</script>
+</body>
+</html>
