@@ -659,6 +659,10 @@
    ============================================================ */
 // DATA_VERIF agora é automática — definida logo após HOJE, sempre com a data vigente no Brasil.
 const CUPONS = [
+  {codigo:"QUEROOFF", desconto:"30% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/2A4TvQk", novo:"2026-10-26"},
+  {codigo:"ECONOMIZE", desconto:"30% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1MGY7Gw", novo:"2026-10-26"},
+  {codigo:"VANTAGEMMELI", desconto:"25% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/2E3wYN9", novo:"2026-10-26"},
+  {codigo:"SUPERDESCONTO", desconto:"25% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1pE72n9", novo:"2026-10-26"},
   {codigo:"MODA2510", desconto:"20% OFF", regra:"Compras acima de <b>R$ 299</b> · desconto máximo de <b>R$ 70</b>", cat:"geral", link:"https://meli.la/29xwpRQ", vence:"2026-10-25", novo:"2026-10-25"},
   {codigo:"FULL2510", desconto:"10% OFF", regra:"Compras acima de <b>R$ 89</b> · desconto máximo de <b>R$ 20</b>", cat:"geral", link:"https://meli.la/1vayxtK", vence:"2026-10-25", novo:"2026-10-25"},
   {codigo:"BOOOO15", desconto:"15% OFF", regra:"Compras acima de <b>R$ 49</b> · desconto máximo de <b>R$ 30</b>", cat:"geral", link:"https://meli.la/1jxaRCL", vence:"2026-10-31", novo:"2026-10-20"},
@@ -757,7 +761,6 @@ const CUPONS = [
   {codigo:"VEMPROMELI", desconto:"25% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/211AQam", vence:"2026-11-02", novo:"2026-09-29"},
   {codigo:"DESCONTO", desconto:"25% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1UgVDFc", vence:"2026-11-09", novo:"2026-10-02"},
   {codigo:"ESPECIALDESCONTOS", desconto:"25% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1oAUVPA", vence:"2026-11-27", novo:"2026-10-16"},
-  {codigo:"MELIDESCONTOS", desconto:"25% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/2fNGJXU", vence:"2026-11-24", novo:"2026-10-14"},
   {codigo:"CLIENTETOP", desconto:"22% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1WErqeF", vence:"2026-12-31"},
   {codigo:"POUPAMAIS", desconto:"25% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/27hdevS", vence:"2026-11-25", novo:"2026-10-14"},
   {codigo:"MELICOMPRACERTA", desconto:"22% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/31oLwen", vence:"2026-10-29", novo:"2026-09-30"},
@@ -811,7 +814,6 @@ const CUPONS = [
   {codigo:"FORTUNAOCULOS", desconto:"12% OFF", regra:"Compras acima de <b>R$ 40</b> · desconto máximo de <b>R$ 300</b> · Cacife Brand óculos", cat:"marcas", link:"https://meli.la/2cS1zeW", vence:"2026-10-31", novo:"2026-10-14"},
   {codigo:"FORTUNARELOGIOS", desconto:"12% OFF", regra:"Compras acima de <b>R$ 50</b> · desconto máximo de <b>R$ 300</b> · loja Fortuna (relógios e óculos)", cat:"marcas", link:"https://meli.la/2KWdnkH", vence:"2026-11-22", novo:"2026-10-24"},
   {codigo:"SETUPNINJA20", desconto:"20% OFF", regra:"Compras acima de <b>R$ 50</b> · desconto máximo de <b>R$ 10</b> · loja Setup Ninja", cat:"marcas", link:"https://meli.la/1XygBuB", vence:"2026-10-31", novo:"2026-10-16"},
-  {codigo:"AVANT25", desconto:"25% OFF", regra:"Compras acima de <b>R$ 59</b> · desconto máximo de <b>R$ 100</b>", cat:"marcas", link:"https://meli.la/1SoboPj", vence:"2026-10-31", novo:"2026-10-17"},
   {codigo:"PROMOISDIN10", desconto:"10% OFF", regra:"Compras acima de <b>R$ 5</b> · desconto máximo de <b>R$ 145</b>", cat:"marcas", link:"https://meli.la/24tnGW4", vence:"2026-10-31", novo:"2026-10-17"},
   {codigo:"BEAUTY15", desconto:"15% OFF", regra:"Compras acima de <b>R$ 5</b> · desconto máximo de <b>R$ 145</b> · produtos Mantecorp (Epidrat, Episol)", cat:"marcas", link:"https://meli.la/2uTcqgy", vence:"2026-10-31", novo:"2026-10-20"},
   {codigo:"PROMODARROW15", desconto:"15% OFF", regra:"Compras acima de <b>R$ 5</b> · desconto máximo de <b>R$ 145</b> · produtos Darrow", cat:"marcas", link:"https://meli.la/2MoS5QJ", vence:"2026-10-31", novo:"2026-10-20"},
