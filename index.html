@@ -659,6 +659,7 @@
    ============================================================ */
 // DATA_VERIF agora é automática — definida logo após HOJE, sempre com a data vigente no Brasil.
 const CUPONS = [
+  {codigo:"BEBESML", desconto:"15% OFF", regra:"Compras acima de <b>R$ 79</b> · desconto máximo de <b>R$ 30</b> · bebês", cat:"geral", link:"https://meli.la/29Xit9J", vence:"2026-10-31", novo:"2026-10-29"},
   {codigo:"PROMOAGORA", desconto:"20% OFF", regra:"Compras acima de <b>R$ 99</b> · desconto máximo de <b>R$ 50</b> · acessórios para veículos", cat:"geral", link:"https://meli.la/1BgVkDo", vence:"2026-10-28", novo:"2026-10-28"},
   {codigo:"SAUDE2810", desconto:"20% OFF", regra:"Compras acima de <b>R$ 299</b> · desconto máximo de <b>R$ 80</b> · saúde", cat:"geral", link:"https://meli.la/1QA2zy9", vence:"2026-10-28", novo:"2026-10-28"},
   {codigo:"AGORAOUNUNCA", desconto:"30% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1ffzq8Z", vence:"2026-12-25", novo:"2026-10-27"},
@@ -674,7 +675,6 @@ const CUPONS = [
   {codigo:"VALETECH", desconto:"10% OFF", regra:"Compras acima de <b>R$ 149</b> · desconto máximo de <b>R$ 200</b> · tecnologia", cat:"geral", link:"https://meli.la/1fpa8hM", vence:"2026-10-28", novo:"2026-10-28"},
   {codigo:"LIVROS15", desconto:"15% OFF", regra:"Compras acima de <b>R$ 19</b> · desconto máximo de <b>R$ 20</b>", cat:"geral", link:"https://meli.la/153bFQG", vence:"2026-10-31", novo:"2026-10-17"},
   {codigo:"PEGAESSA", desconto:"30% OFF", regra:"Compras acima de <b>R$ 29</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1XRD58f", vence:"2026-12-31", novo:"2026-10-17"},
-  {codigo:"INSTRUMENTO15", desconto:"15% OFF", regra:"Compras acima de <b>R$ 200</b> · desconto máximo de <b>R$ 80</b> · instrumentos", cat:"geral", link:"https://meli.la/2WiHo58", vence:"2026-10-31", novo:"2026-10-28"},
   {codigo:"MOVEIS100", desconto:"R$ 100 OFF", regra:"Compras acima de <b>R$ 399</b> · móveis selecionados", cat:"casa", link:"https://meli.la/27c1aZX", vence:"2026-10-31", novo:"2026-10-22"},
   {codigo:"PEGUESEUOFF", desconto:"30% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/2kAHUJX", vence:"2026-12-25", novo:"2026-10-27"},
   {codigo:"MELICOMPRAAI", desconto:"22% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/2TjSvjL", vence:"2026-12-31", destaque:true},
@@ -698,7 +698,6 @@ const CUPONS = [
   {codigo:"MELHORDODIA", desconto:"18% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/2YoyCu5", vence:"2026-12-31", novo:"2026-10-08"},
   {codigo:"MELINOVALE", desconto:"18% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/2Z6rsTe", vence:"2026-12-31"},
   {codigo:"POUPEMELI", desconto:"30% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/2o4DhRs", vence:"2026-12-19", novo:"2026-10-21"},
-  {codigo:"AVANT25", desconto:"25% OFF", regra:"Compras acima de <b>R$ 59</b> · desconto máximo de <b>R$ 100</b>", cat:"geral", link:"https://meli.la/1s6a5wG", vence:"2026-10-31", novo:"2026-10-28"},
   {codigo:"SPORTS15", desconto:"15% OFF", regra:"Compras acima de <b>R$ 20</b> · desconto máximo de <b>R$ 100</b>", cat:"geral", link:"https://meli.la/22Qwykm", vence:"2026-10-31", novo:"2026-10-21"},
   {codigo:"PROMOVALE", desconto:"30% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1cVoz2z", vence:"2026-11-16", novo:"2026-10-07"},
   {codigo:"CORREQUETEM", desconto:"30% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1pe2KWD", vence:"2026-12-19", novo:"2026-10-21"},
@@ -847,6 +846,7 @@ const CUPONS = [
   {codigo:"STETSOM10OFF", desconto:"10% OFF", regra:"Compras acima de <b>R$ 285,40</b> · desconto máximo de <b>R$ 30</b> · Stetsom", cat:"marcas", link:"https://meli.la/2FsCaxG", vence:"2026-10-29", novo:"2026-10-28"},
   {codigo:"STETSOM12", desconto:"12% OFF", regra:"Compras acima de <b>R$ 1.235,75</b> · desconto máximo de <b>R$ 156</b> · Stetsom", cat:"marcas", link:"https://meli.la/1nVc52h", vence:"2026-10-29", novo:"2026-10-28"},
   {codigo:"CLUBNIVEA", desconto:"20% OFF", regra:"Compras acima de <b>R$ 59,90</b> · desconto máximo de <b>R$ 100</b> · Nivea", cat:"marcas", link:"https://meli.la/1fgUMaQ", vence:"2026-10-30", novo:"2026-10-28"},
+  {codigo:"INSIDINSIDERHJ5", desconto:"5% OFF", regra:"Compras acima de <b>R$ 50</b> · desconto máximo de <b>R$ 50</b> · loja Insider", cat:"marcas", link:"https://meli.la/2HVbc5Y", vence:"2026-10-30", novo:"2026-10-29"},
 ];
 
 const CATEGORIAS = {
