@@ -659,16 +659,9 @@
    ============================================================ */
 // DATA_VERIF agora é automática — definida logo após HOJE, sempre com a data vigente no Brasil.
 const CUPONS = [
-  {codigo:"CASAMELI", desconto:"20% OFF", regra:"Compras acima de <b>R$ 79</b> · desconto máximo de <b>R$ 80</b> · casa e decoração", cat:"casa", link:"https://meli.la/27o3gqK", vence:"2026-11-03", novo:"2026-11-03"},
-  {codigo:"AUTOMELI", desconto:"18% OFF", regra:"Compras acima de <b>R$ 99</b> · desconto máximo de <b>R$ 50</b> · acessórios para veículos", cat:"geral", link:"https://meli.la/26BKpCf", vence:"2026-11-03", novo:"2026-11-03"},
   {codigo:"AGORAOUNUNCA", desconto:"30% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1ffzq8Z", vence:"2026-12-25", novo:"2026-10-27"},
-  {codigo:"CONSTRUIRMELI", desconto:"15% OFF", regra:"Compras acima de <b>R$ 79</b> · desconto máximo de <b>R$ 60</b> · construção", cat:"casa", link:"https://meli.la/2EV2Z4j", vence:"2026-11-03", novo:"2026-11-03"},
-  {codigo:"MODAML", desconto:"12% OFF", regra:"Compras acima de <b>R$ 79</b> · desconto máximo de <b>R$ 60</b> · moda", cat:"moda", link:"https://meli.la/2oysDWa", vence:"2026-11-03", novo:"2026-11-03"},
   {codigo:"MAISOFERTA", desconto:"30% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/2UeaJvd", vence:"2026-12-31"},
-  {codigo:"OFERTAHOJE", desconto:"10% OFF", regra:"Compras acima de <b>R$ 149</b> · desconto máximo de <b>R$ 200</b> · tecnologia e eletrodomésticos", cat:"geral", link:"https://meli.la/1uTkVKi", vence:"2026-11-03", novo:"2026-11-03"},
-  {codigo:"SPORTS11DO11", desconto:"10% OFF", regra:"Compras acima de <b>R$ 299</b> · desconto máximo de <b>R$ 70</b>", cat:"geral", link:"https://meli.la/21FuwkH", vence:"2026-11-11", novo:"2026-11-03"},
   {codigo:"PROMOCERTAML", desconto:"30% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1r2ENXB", vence:"2026-11-22", novo:"2026-10-09"},
-  {codigo:"VOLTESEMPRE", desconto:"10% OFF", regra:"Compras acima de <b>R$ 149</b> · desconto máximo de <b>R$ 200</b> · tecnologia e eletrodomésticos", cat:"geral", link:"https://meli.la/1zrXA8Y", vence:"2026-11-03", novo:"2026-11-03"},
   {codigo:"MELICOMPRAAI", desconto:"22% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/2TjSvjL", vence:"2026-12-31", destaque:true},
   {codigo:"HOJENOMELI", desconto:"30% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1QXZrz7", vence:"2026-11-22", novo:"2026-10-10"},
   {codigo:"CLUBEDECUPONS", desconto:"20% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/14uip7t", vence:"2026-12-21", novo:"2026-10-23", destaque:true},
@@ -802,7 +795,6 @@ const CUPONS = [
   {codigo:"MELIOFFAQUI", desconto:"25% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/2LSK4Sk", vence:"2026-11-22", novo:"2026-10-09"},
   {codigo:"DESCONTOJUSTO", desconto:"22% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/1buHBCh", vence:"2026-11-30"},
   {codigo:"VAIBARATO", desconto:"22% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/27TaAfm", vence:"2026-11-30", novo:"2026-10-06"},
-  {codigo:"ESTOQUE0311", desconto:"25% OFF", regra:"Compras acima de <b>R$ 79</b> · desconto máximo de <b>R$ 50</b>", cat:"geral", link:"https://meli.la/14r5ZL8", vence:"2026-11-03", novo:"2026-11-03"},
   {codigo:"TUDONOMELHOR", desconto:"20% OFF", regra:"Compras acima de <b>R$ 1</b> · desconto máximo de <b>R$ 500</b>", cat:"geral", link:"https://meli.la/2CQ1uPG", vence:"2026-12-19", novo:"2026-10-21"},
   {codigo:"COLCHAO10", desconto:"10% OFF", regra:"Compras acima de <b>R$ 199</b> · desconto máximo de <b>R$ 150</b>", cat:"casa", link:"https://meli.la/18tejiU", vence:"2026-12-31"},
   {codigo:"SEMPRECASA", desconto:"15% OFF", regra:"Compras acima de <b>R$ 79</b> · desconto máximo de <b>R$ 60</b> · casa", cat:"casa", link:"https://meli.la/31dd2Jp", vence:"2026-11-02", novo:"2026-11-02"},
@@ -868,6 +860,7 @@ const CUPONS = [
   {codigo:"DARROWMELI", desconto:"15% OFF", regra:"Compras acima de <b>R$ 5</b> · desconto máximo de <b>R$ 145</b> · produtos Darrow", cat:"marcas", link:"https://meli.la/1yJKoGa", vence:"2026-11-06", novo:"2026-11-03"},
   {codigo:"AVENEMELI", desconto:"15% OFF", regra:"Compras acima de <b>R$ 5</b> · desconto máximo de <b>R$ 145</b> · produtos Avène", cat:"marcas", link:"https://meli.la/2xip733", vence:"2026-11-06", novo:"2026-11-03"},
   {codigo:"GARNIERNOMELI", desconto:"15% OFF", regra:"Compras acima de <b>R$ 49,90</b> · desconto máximo de <b>R$ 20</b> · produtos Garnier", cat:"marcas", link:"https://meli.la/1jYRfkt", vence:"2026-11-30", novo:"2026-11-03"},
+  {codigo:"LOREALNOMELI", desconto:"15% OFF", regra:"Compras acima de <b>R$ 79,90</b> · desconto máximo de <b>R$ 50</b> · produtos L'Oréal Paris", cat:"marcas", link:"https://meli.la/1N2twT6", vence:"2026-11-30", novo:"2026-11-04"},
 ];
 
 const CATEGORIAS = {
