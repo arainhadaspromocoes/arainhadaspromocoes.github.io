@@ -403,6 +403,8 @@
     margin-bottom:12px;
   }
   #grade-destaque .cupom{border:3px solid var(--amarelo);box-shadow:6px 6px 0 var(--preto),0 0 0 3px var(--preto)}
+  #grade-hoje .cupom{border:3px solid #e53935;box-shadow:6px 6px 0 var(--preto),0 0 0 3px #e53935}
+  .titulo-hoje{color:#e53935}
   .btn-compartilhar{
     display:flex;align-items:center;justify-content:center;gap:6px;
     font-size:.8rem;font-weight:700;color:#128C7E;
@@ -602,6 +604,11 @@
 
 <div class="container">
   <main>
+    <div id="secao-hoje" style="display:none">
+      <div class="titulo-secao titulo-hoje">⏰ Cupons do Mercado Livre que acabam hoje</div>
+      <div class="grade" id="grade-hoje"></div>
+      <div style="height:26px"></div>
+    </div>
     <div id="secao-queridinhos">
       <div class="titulo-secao">🔥 Queridinhos da Rainha</div>
       <div class="grade" id="grade-destaque"></div>
@@ -659,6 +666,10 @@
    ============================================================ */
 // DATA_VERIF agora é automática — definida logo após HOJE, sempre com a data vigente no Brasil.
 const CUPONS = [
+  {codigo:"ELETRO2211", desconto:"15% OFF", regra:"Desconto máximo de <b>R$ 100</b> · som, vídeo e eletro", cat:"geral", link:"https://meli.la/1q7Fxda", vence:"2026-11-22", novo:"2026-11-22"},
+  {codigo:"BEBESPETS2211", desconto:"15% OFF", regra:"Desconto máximo de <b>R$ 50</b> · bebês e pets", cat:"geral", link:"https://meli.la/1mgENMf", vence:"2026-11-22", novo:"2026-11-22"},
+  {codigo:"OFICIAIS2211", desconto:"10% OFF", regra:"Desconto máximo de <b>R$ 40</b> · lojas oficiais", cat:"geral", link:"https://meli.la/1t1pXbz", vence:"2026-11-22", novo:"2026-11-22"},
+  {codigo:"MODA2311", desconto:"15% OFF", regra:"Desconto máximo de <b>R$ 45</b> · moda", cat:"moda", link:"https://meli.la/1ivrAB9", vence:"2026-11-23", novo:"2026-11-22"},
   {codigo:"GRAND100MP", desconto:"R$ 100 OFF", regra:"Compras acima de <b>R$ 449</b> · produtos selecionados (pagando com Mercado Pago)", cat:"geral", link:"https://meli.la/2naewH8", vence:"2026-11-20", novo:"2026-11-20"},
   {codigo:"FULL2011", desconto:"20% OFF", regra:"Compras acima de <b>R$ 159</b> · desconto máximo de <b>R$ 40</b> · produtos Full", cat:"geral", link:"https://meli.la/1U4UQoa", vence:"2026-11-20", novo:"2026-11-20"},
   {codigo:"OFERTAVEIC", desconto:"15% OFF", regra:"Compras acima de <b>R$ 199</b> · desconto máximo de <b>R$ 60</b> · acessórios para veículos", cat:"geral", link:"https://meli.la/1yaKAZN", vence:"2026-11-19", novo:"2026-11-19"},
@@ -1080,6 +1091,19 @@ function renderizar(){
     ATIVOS.filter(c=>c.destaque).forEach(c=>gradeDestaque.appendChild(criarCard(c)));
   } else {
     secaoQ.style.display = 'none';
+  }
+  const gradeHoje = document.getElementById('grade-hoje');
+  const secaoH = document.getElementById('secao-hoje');
+  gradeHoje.innerHTML = '';
+  const pctH = c => { const m = /(\d+)%/.exec(c.desconto||''); return m ? +m[1] : -1; };
+  const ddH = HOJE.slice(8,10)+HOJE.slice(5,7);
+  const isDataH = c=>new RegExp(ddH+'$').test(c.codigo||'') ? 1 : 0;
+  const deHoje = ATIVOS.filter(c=>c.vence===HOJE).sort((a,b)=>(isDataH(b)-isDataH(a))||(pctH(b)-pctH(a)));
+  if(filtroAtivo === 'todos' && !termoBusca && deHoje.length){
+    secaoH.style.display = '';
+    deHoje.forEach(c=>gradeHoje.appendChild(criarCard(c)));
+  } else {
+    secaoH.style.display = 'none';
   }
   lista.forEach(c=>{
     gradeEl.appendChild(criarCard(c));
